@@ -1,0 +1,40 @@
+/* make the customizations */
+$theme-colors: (
+  'info': #7E7CFD,
+  'danger': teal,
+  'primary': #A855F7,
+);
+
+$border: 1px solid rgb(17 24 39 / 0.05);
+$light: rgb(249 250 251 / 1);
+
+
+
+@import '~bootstrap/scss/bootstrap';
+
+
+.alert{
+  border: $border;
+  border-radius: 9999px;
+  padding: 8px 12px;
+}
+.alert-light{
+  background-color: $light;
+}
+
+@media (min-width: 300px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1400px) {
+  body {
+    padding-top: 87px;
+    
+  }
+}
+
