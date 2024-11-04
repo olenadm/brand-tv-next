@@ -1,7 +1,6 @@
 import { TabGroup } from "../components/ui/TabGroup";
 import { Container } from "react-bootstrap";
 import Sidebar from "../components/sidebar/Sidebar";
-import Image from "next/image";
 import RecommendedVideoList from "@/app/components/ui/RecommendedVideoList";
 import HeroIndividual from "../components/HeroIndividual";
 

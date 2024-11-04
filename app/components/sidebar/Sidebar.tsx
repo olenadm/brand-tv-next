@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 
 import styles from "./sidebar.module.css";
-import Link from "next/link";
 import OffcanvasSide from "./Offcanvas";
 
 const Sidebar = () => {

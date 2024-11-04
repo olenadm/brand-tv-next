@@ -7,8 +7,7 @@ import {
   OffcanvasTitle,
   OffcanvasBody,
 } from "react-bootstrap";
-import styles from "./sidebar.module.css";
-import Link from "next/link";
+
 
 const OffcanvasSide = () => {
   const [show, setShow] = useState(false);
