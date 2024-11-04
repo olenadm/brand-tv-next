@@ -1,25 +1,85 @@
 /* make the customizations */
 $theme-colors: (
-  'info': #7E7CFD,
-  'danger': teal,
-  'primary': #A855F7,
+  "info": #7e7cfd,
+  "danger": teal,
+  "primary": #a855f7,
+  "dark": black,
+  "light": rgb(249 250 251 / 1),
+  "secondary": rgb(249 250 251 / 1),
+  "default": rgba(0, 0, 0, 0.08),
 );
 
 $border: 1px solid rgb(17 24 39 / 0.05);
+$border-color: rgb(17 24 39 / 0.07);
 $light: rgb(249 250 251 / 1);
+$navbar-light-color: rgb(17 24 39);
+$default-hover: rgba(0, 0, 0, 0.08);
 
+@import "~bootstrap/scss/bootstrap";
 
+html,
+body {
+  min-height: 100% !important;
+  height: 100%;
+}
 
-@import '~bootstrap/scss/bootstrap';
+.navbar {
+  z-index: 2;
+}
 
+.nav-link {
+  font-weight: 500;
+}
 
-.alert{
+.alert {
   border: $border;
   border-radius: 9999px;
   padding: 8px 12px;
 }
-.alert-light{
+.alert-light {
   background-color: $light;
+}
+
+.feature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
+}
+
+.videoplaceholder {
+  background-color: rgba(249 250 251); //rgb(17 24 39 / 0.05)
+  border: $border;
+  min-height: 110px;
+}
+
+.bg-secondary .videoplaceholder {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.navButton {
+  border-radius: 50%;
+  margin: 10px auto;
+  font-size: 22px;
+  text-align: center;
+  color: $dark;
+  display: block;
+}
+.play {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+}
+
+.navButton:hover {
+  background-color: $default-hover;
+}
+
+.footer {
+  z-index:100;
 }
 
 @media (min-width: 300px) {
@@ -33,8 +93,6 @@ $light: rgb(249 250 251 / 1);
 
 @media (min-width: 1400px) {
   body {
-    padding-top: 87px;
-    
+    padding-top: 81px;
   }
 }
-
