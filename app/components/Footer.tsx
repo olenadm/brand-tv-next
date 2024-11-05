@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 const Footer: React.FC = () => {
   return (
-    <footer className="py-4 bg-dark mt-auto rounded-top-5 footer">
+    <footer className="py-2 py-md-4 bg-dark mt-auto rounded-top-5 footer">
       <Container>
         <Row className="d-none d-md-block">
           <Col>
