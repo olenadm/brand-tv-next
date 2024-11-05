@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, Col, CardBody } from "react-bootstrap";
+import { Col} from "react-bootstrap";
+import Video from "./Video";
 
 export default function VideoList(props:{catName: string | undefined}) {
     const {catName} = props;
@@ -10,15 +11,8 @@ export default function VideoList(props:{catName: string | undefined}) {
 
       <div className="row">
         {Array.from({ length: 16 }).map((_, i) => (
-          <Col key={i} sm={3}>
-            <Card className="rounded-3 mb-2 videoplaceholder text-center">
-              <CardBody>
-                <p className="mb-0">
-                  Video: {category} {i + 1}
-                </p>
-                <a href="#" className="btn btn-default play my-4 text-center bg-gradient"><i className="bi bi-play-fill"></i></a>
-              </CardBody>
-            </Card>
+          <Col key={i} sm={3} md={6} lg={3}>
+            <Video slug='promvideo' name='Video' id={i +1}/>
             <a href="#" className="btn btn-info mb-3 text-center w-100 text-white bg-gradient mb-4">CTA</a>
 
           </Col>

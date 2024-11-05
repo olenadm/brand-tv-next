@@ -8,9 +8,14 @@
   z-index:99;
   width: 70px;
   padding: 5px 5px;
+  display:none;
     
 }
 
-@media (max-width: 768px) {
- 
+@media (min-width: 768px) {
+ .wrapper {display:block; width:52px;}
+
+}
+@media (min-width: 1025px) {
+  .wrapper{width:70px;}
 }

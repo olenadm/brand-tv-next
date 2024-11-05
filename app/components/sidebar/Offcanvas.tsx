@@ -22,7 +22,7 @@ const OffcanvasSide = () => {
 
       <Offcanvas show={show} onHide={handleClose} scroll={true}>
         <OffcanvasHeader closeButton>
-          <OffcanvasTitle>Offcanvas</OffcanvasTitle>
+          <OffcanvasTitle>Sidebar content</OffcanvasTitle>
         </OffcanvasHeader>
         <OffcanvasBody>
           Some text as placeholder. In real life you can have the elements you

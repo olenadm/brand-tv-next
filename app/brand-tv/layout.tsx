@@ -3,37 +3,8 @@ import { Container } from "react-bootstrap";
 import Sidebar from "../components/sidebar/Sidebar";
 import RecommendedVideoList from "@/app/components/ui/RecommendedVideoList";
 import HeroIndividual from "../components/HeroIndividual";
+import { categories } from "../api/categories/data";
 
-export const categories = [
-  {
-    name: "Our Company",
-    slug: "cat-1",
-    subcats: [
-      { name: "Films 2", slug: "films-2" },
-      { name: "Films 3", slug: "films-3" },
-    ],
-  },
-  {
-    name: "Films",
-    slug: "films",
-    subcats: [
-      { name: "Films 4", slug: "films-4" },
-      { name: "Films 5", slug: "films-5" },
-    ],
-  },
-  {
-    name: "Professional",
-    slug: "professional",
-    subcats: [
-      { name: "Films 6", slug: "films-6" },
-      { name: "Films 7", slug: "films-7" },
-    ],
-  },
-  {
-    name: "Promotional Videos",
-    slug: "prom",
-  },
-];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -41,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Sidebar />
       <HeroIndividual />
 
-      <Container className="ps-lg-4">
+      <Container className="ps-md-5 ">
         <div className="row">
           <div className="col px-lg-3 mt-4">
             <TabGroup

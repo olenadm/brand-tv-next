@@ -52,12 +52,16 @@ body {
 .videoplaceholder {
   background-color: rgba(249 250 251); //rgb(17 24 39 / 0.05)
   border: $border;
-  min-height: 110px;
+ 
 }
 
-.bg-secondary .videoplaceholder {
+.bg-secondary .videoplaceholder,
+.hero .videoplaceholder {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.hero .videoplaceholder {
+  min-height: 300px;
 }
 
 .navButton {
@@ -79,20 +83,60 @@ body {
 }
 
 .footer {
-  z-index:100;
+  z-index: 100;
+}
+.footer a:link,
+footer a:visited {
+  color: #fff;
+}
+.footer .bi {
+  font-size: 30px;
 }
 
 @media (min-width: 300px) {
   body {
     padding-top: 80px;
   }
+ 
+  .ind .videoplaceholder {
+    min-height: 300px;
+  }
+
+  .videoplaceholder {   
+    min-height: 80px;
+  }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px){
+  .footer {
+    position:fixed;
+    bottom:0;
+    width:100%;
+  }
+  .appwrap {
+    padding-bottom: 90px;
+  }
+
+  .videoplaceholder {   
+    min-height: 110px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .videoplaceholder {   
+    min-height: 80px;
+  }
 }
 
 @media (min-width: 1400px) {
   body {
     padding-top: 81px;
   }
+  .videoplaceholder {   
+    min-height: 110px;
+  }
+  .ind .videoplaceholder {
+    min-height: 450px;
+  }
+ 
 }

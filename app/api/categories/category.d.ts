@@ -1,6 +1,7 @@
 export type Category = {
     name: string;
     slug: string;
-    count: number;
-    parent: string | null;
+    count?: number;
+    parent?: string | null;
+    subcats?: [] | undefined;
   };

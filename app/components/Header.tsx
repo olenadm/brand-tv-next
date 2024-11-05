@@ -1,8 +1,7 @@
 import {
   Navbar,
   Container,
-  NavbarToggle,
-  NavbarCollapse,
+ 
   NavLink,
   Nav,
 } from "react-bootstrap";
@@ -17,19 +16,19 @@ const Header: React.FC = () => {
       fixed="top"
       expand="lg"
     >
-      <Container >
+      <Container className='px-md-4 px-lg-4 px-xl-3'>
         <Link href="/" className="navbar-brand">
           <Image
             src="/brand-tv-banner.png"
             alt="Logo"
-            className="logo"
-            width={180}
-            height={55}
+            className="logo ms-md-4 ms-lg-0"
+            width={170}
+            height={56}
           />
         </Link>
-        <NavbarToggle aria-controls="basic-navbar-nav" />
-        <NavbarCollapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        
+     
+          <Nav className="me-auto d-none d-sm-block">
             <Link href="/brand-tv#top" className="nav-link">
               Product
             </Link>
@@ -40,7 +39,7 @@ const Header: React.FC = () => {
               Log In <i className="bi bi-arrow-right"></i>
             </NavLink>
           </Nav>
-        </NavbarCollapse>
+        
       </Container>
     </Navbar>
   );

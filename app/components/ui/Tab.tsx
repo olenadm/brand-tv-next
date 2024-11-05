@@ -24,7 +24,7 @@ export const Tab = ({
     segment === item.slug;
 
   return (
-    <li className="nav-item my-3">
+    <li className="nav-item my-lg-3 my-md-2">
       <Link href={href} className={isActive ? "nav-link active" : "nav-link"}>
         {item.text}
       </Link>
