@@ -15,7 +15,7 @@ const OffcanvasSide = () => {
   const handleShow = () => setShow(true);
   return (
     <>
-      <button className="navButton" onClick={handleShow}>
+      <button className="navButton text-center" onClick={handleShow}>
         <i className="bi bi-list"></i>
       </button>
 
