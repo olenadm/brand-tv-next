@@ -2,13 +2,12 @@
 
 import BrandsFooter from "@/app/components/BrandsFooter";
 import BrandsHeader from "@/app/components/BrandsHeader";
-// import Sidebar from "@/app/components/sidebar/Sidebar";
 import { Container } from "react-bootstrap";
 import { Racing_Sans_One } from "next/font/google";
 const racing = Racing_Sans_One({ weight: "400", subsets: ["latin"] });
 import '@/app/replay/globals.scss'
 
-export default async function Layout({
+export default  function Layout({
   children,
   //recommended,
   youmightlike,
