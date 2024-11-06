@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       <header className="py-4 bg-body-tertiary h-100 hero">
         <div className="container px-5">
           <div className="row gx-5 align-items-center justify-content-center">
-            <div className="col-lg-8 col-xl-7 col-xxl-6">
+            <div className="col-lg-8 col-xl-7 col-xxl-6 order-1">
               <div className="my-5 text-center text-xl-start h-100">
                 <h1 className="display-5 fw-bolder mb-2">
                   Lorem ipsum headline
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-5 col-xxl-6  text-center">
+            <div className="col-xl-5 col-xxl-6  text-center  order-0 order-sm-2">
               <Video slug="promvideo" name="Video" id={1} />
             </div>
           </div>
