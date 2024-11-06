@@ -25,7 +25,7 @@ export default function Video(props: {
             </p>
             <Link
               href={url}
-              scroll={false}
+              scroll={true}
                          
               className="btn btn-default play my-4 text-center bg-gradient"
             >
