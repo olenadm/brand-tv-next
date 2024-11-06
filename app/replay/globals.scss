@@ -1,17 +1,22 @@
-/* make the customizations */
+/* make the customizations replay */
 $theme-colors: (
-  "info": #7e7cfd,
-  "danger": rgb(148, 15, 15),
-  "primary": #a855f7,  
-); 
+  "info": #ce102c,
+  "danger": teal,
+  "primary": #e60e2d,
+  "dark": #021e42,
+  "light": rgb(249 250 251 / 1),
+  "secondary": rgb(249 250 251 / 1),
+  "default": rgba(0, 0, 0, 0.08),
+);
 
 $border: 1px solid rgb(17 24 39 / 0.05);
 $border-color: rgb(17 24 39 / 0.07);
 $light: rgb(249 250 251 / 1);
 $navbar-light-color: rgb(17 24 39);
+$navbar-dark-color: #fff;
 $default-hover: rgba(0, 0, 0, 0.08);
-
-
+$hero-gradient-start: #021e42;
+$hero-gradien-end: rgba(2, 30, 66, 1);
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -21,12 +26,30 @@ body {
   height: 100%;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+}
+
 .navbar {
   z-index: 2;
 }
 
 .nav-link {
   font-weight: 500;
+}
+
+.hero {
+  background-color: $hero-gradient-start;
+  background-image: linear-gradient(
+    17deg,
+    $hero-gradient-start 10%,
+    $hero-gradien-end 100%
+  );
+
+  color: #fff;
 }
 
 .alert {
@@ -61,8 +84,26 @@ body {
   min-height: 300px;
 }
 
+.navButton {
+  border-radius: 50%;
+  border: 0;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin-right: 10px;
+  background-color: transparent;
+}
+.play {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+}
 
-
+.navButton:hover {
+  background-color: $default-hover;
+  color: #fff;
+}
 
 .footer {
   z-index: 100;
@@ -75,10 +116,9 @@ footer a:visited {
   font-size: 25px;
 }
 
-
 @media (min-width: 300px) {
   body {
-    padding-top: 80px;
+    padding-top: 70px;
   }
 
   .ind .videoplaceholder {
@@ -109,18 +149,23 @@ footer a:visited {
   .videoplaceholder {
     min-height: 80px;
   }
+  
 }
 
 @media (min-width: 1400px) {
   body {
-    padding-top: 81px;
+    padding-top: 70px;
   }
+
+  .footer {
+    margin-top: 35px;
+  }
+
   .videoplaceholder {
     min-height: 110px;
   }
   .ind .videoplaceholder {
     min-height: 450px;
   }
+
 }
-
-

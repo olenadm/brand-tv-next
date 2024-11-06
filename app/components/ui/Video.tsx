@@ -1,12 +1,17 @@
+'use client'
+
 import React from "react";
 import { Card, CardBody } from "react-bootstrap";
 import Link from "next/link";
+ 
+
 
 export default function Video(props: {
   slug: string | undefined;
   name: string | undefined;
   id: number | undefined;
 }) {
+
   const { slug, id, name } = props;
   const url = `/${slug}/`;
 
@@ -20,9 +25,8 @@ export default function Video(props: {
             </p>
             <Link
               href={url}
-              scroll={true}
-              prefetch={false}
-            
+              scroll={false}
+                         
               className="btn btn-default play my-4 text-center bg-gradient"
             >
               <i className="bi bi-play-fill"></i>

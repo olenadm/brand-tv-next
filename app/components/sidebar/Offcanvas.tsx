@@ -16,9 +16,9 @@ const OffcanvasSide = () => {
   const handleShow = () => setShow(true);
   return (
     <>
-      <Button variant="secondary" className="navButton" onClick={handleShow}>
+      <button className="navButton" onClick={handleShow}>
         <i className="bi bi-list"></i>
-      </Button>
+      </button>
 
       <Offcanvas show={show} onHide={handleClose} scroll={true}>
         <OffcanvasHeader closeButton>

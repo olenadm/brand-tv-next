@@ -1,6 +1,7 @@
 // import { TabGroup } from '@/app/components/ui/TabGroup';
 // import { categories } from "../layout";
 
+
 export default async function Layout(props: {
   children: React.ReactNode;
   params: Promise<{ categorySlug: string }>;
@@ -13,9 +14,10 @@ export default async function Layout(props: {
   //const categories = categories;
 
   return (
-    <div className="row">
-      <div className="col">
-        {/* <TabGroup
+    <div>
+      <div className="row">
+        <div className="col">
+          {/* <TabGroup
           path={`/brand-tv/${category.slug}`}
           items={[
             {
@@ -29,7 +31,8 @@ export default async function Layout(props: {
           ]}
         /> */}
 
-        <div>{children}</div>
+          <div>{children}</div>
+        </div>
       </div>
     </div>
   );

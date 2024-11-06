@@ -14,7 +14,7 @@ export default async function Page(props: {
   return (
     <>
     
-      <VideoList catName={catName} />
+      <VideoList catName={catName}  slug='videos/promvideo' />
 
      
     </>

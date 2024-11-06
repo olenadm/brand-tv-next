@@ -1,17 +1,19 @@
 /* make the customizations */
 $theme-colors: (
   "info": #7e7cfd,
-  "danger": rgb(148, 15, 15),
-  "primary": #a855f7,  
-); 
+  "danger": teal,
+  "primary": #a855f7,
+  "dark": black,
+  "light": rgb(249 250 251 / 1),
+  "secondary": rgb(249 250 251 / 1),
+  "default": rgba(0, 0, 0, 0.08),
+);
 
 $border: 1px solid rgb(17 24 39 / 0.05);
 $border-color: rgb(17 24 39 / 0.07);
 $light: rgb(249 250 251 / 1);
 $navbar-light-color: rgb(17 24 39);
 $default-hover: rgba(0, 0, 0, 0.08);
-
-
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -61,8 +63,26 @@ body {
   min-height: 300px;
 }
 
+.navButton {
+  border-radius: 50%;
+  border:0;
+  font-size: 22px;
+  text-align: center;
+  color: $dark;
+  display: block;
+  position: absolute;
+  left:10px;
+  margin-right:10px;
+}
+.play {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+}
 
-
+.navButton:hover {
+  background-color: $default-hover;
+}
 
 .footer {
   z-index: 100;
@@ -74,7 +94,6 @@ footer a:visited {
 .footer .bi {
   font-size: 25px;
 }
-
 
 @media (min-width: 300px) {
   body {
@@ -121,6 +140,5 @@ footer a:visited {
   .ind .videoplaceholder {
     min-height: 450px;
   }
+  .navButton {position:absolute; left:15px;}
 }
-
-

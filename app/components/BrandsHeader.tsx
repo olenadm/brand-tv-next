@@ -1,36 +1,31 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-
 import { Navbar, Container, NavLink, Nav } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
 import OffcanvasSide from "./sidebar/Offcanvas";
 
-const Header: React.FC = () => {
+const BrandsHeader: React.FC = () => {
   return (
     <Navbar
-      className="bg-body-tertiary"
+      className="bg-dark"
       collapseOnSelect
+      data-bs-theme="dark"
       fixed="top"
       expand="lg"
     >
      
-      <Container>
+      <Container className="px-xl-3">
       <OffcanvasSide />
-        <Link href="/brandtv" className="navbar-brand mx-auto mx-md-0 ms-md-3" scroll={false}>
+        <Link href="/replay" className="navbar-brand mx-auto mx-md-0 ms-md-3" scroll={false}>
           <Image
-            src="/brand-tv-banner.png"
+            src="/replay.png"
             alt="Logo"
             className="logo ms-md-4 ms-lg-0"
-            width={170}
-            height={56}
+            width={200}
+            height={44}
           />
         </Link>
 
-        <Nav className="me-auto d-none d-sm-block ms-2">
-          <a href="/replay" className="nav-link">
-            Product
-          </a>
-        </Nav>
+        
         <Nav className="ms-auto d-none d-md-block">
           <NavLink href="" eventKey="4">
             Log In <i className="bi bi-arrow-right"></i>
@@ -41,4 +36,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default BrandsHeader;

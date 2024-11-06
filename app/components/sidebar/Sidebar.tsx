@@ -4,8 +4,9 @@ import styles from "./sidebar.module.css";
 import OffcanvasSide from "./Offcanvas";
 
 const Sidebar = () => {
+  const classname =  `${styles.wrapper} bg-body-tertiary bg-gradient border-right`
   return (
-    <div className={styles.wrapper}>
+    <div className={classname}>
       <nav>
         <OffcanvasSide />
       </nav>

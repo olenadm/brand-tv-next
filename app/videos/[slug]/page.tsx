@@ -1,5 +1,5 @@
-import RecommendedVideoList from "../components/ui/RecommendedVideoList";
-import Video from "../components/ui/Video";
+import RecommendedVideoList from "@/app/components/ui/RecommendedVideoList";
+import Video from "@/app/components/ui/Video";
 
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
@@ -13,14 +13,14 @@ export default async function Page(props: {
 
   return (
     <>
-      <h3 className="mt-3 mb-4" id="top">
+      <h3 className="mt-3 mb-4">
         Video name
       </h3>
       <div className="ind">
-        <Video slug="promvideo" name="Video Name" id={1} />
+        <Video slug="videos/promvideo" name="Video Name" id={1} />
       </div>
 
-      <RecommendedVideoList slug='promvideo'/>
+      <RecommendedVideoList  slug='videos/promvideo'/>
     </>
   );
 }

@@ -25,7 +25,7 @@ export const Tab = ({
 
   return (
     <li className="nav-item my-lg-3 my-md-2">
-      <Link href={href} className={isActive ? "nav-link active" : "nav-link"}>
+      <Link href={href} className={isActive ? "nav-link active bg-primary rounded-5" : "rounded-5 nav-link text-primary"}>
         {item.text}
       </Link>
     </li>
