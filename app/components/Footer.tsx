@@ -12,17 +12,17 @@ const Footer: React.FC = () => {
         </Row>
         <Row className="d-md-none text-center">
           <Col xs={4}>
-            <a href="/brandstv">
+            <Link href="/brandtv" scroll={true}>
               <i className="bi bi-house-check"></i>
-            </a>
+            </Link>
           </Col>
           <Col xs={4}>
-            <a href="/brandstv">
+            <Link href="/brandtv" scroll={true}>
               <i className="bi bi-person-video2"></i>
-            </a>
+            </Link>
           </Col>
           <Col xs={4}>
-            <Link href="/brandstv" scroll={true}>
+            <Link href="/brandtv" scroll={true}>
               <i className="bi bi-person-check"></i>
             </Link>
           </Col>
