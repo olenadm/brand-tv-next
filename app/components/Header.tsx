@@ -26,11 +26,7 @@ const Header: React.FC = () => {
           />
         </Link>
 
-        <Nav className="me-auto d-none d-sm-block ms-2">
-          <a href="/replay" className="nav-link">
-            Product
-          </a>
-        </Nav>
+       
         <Nav className="ms-auto d-none d-md-block">
           <NavLink href="" eventKey="4">
             Log In <i className="bi bi-arrow-right"></i>
