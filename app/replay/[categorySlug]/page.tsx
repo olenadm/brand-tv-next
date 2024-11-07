@@ -8,15 +8,12 @@ export default async function Page(props: {
   const params = await props.params;
   const category = params.categorySlug;
 
-  const cat = categories.find((cat:Category) => cat.slug === category);
+  const cat = categories.find((cat: Category) => cat.slug === category);
   const catName = cat?.name;
 
   return (
-    <>
-    
-      <VideoList catName={catName}  slug='videos/promvideo' />
-
-     
-    </>
+    <div className="p-3 border rounded-4 mb-5 ms-3">
+      <VideoList catName={catName} slug="videos/promvideo" />
+    </div>
   );
 }

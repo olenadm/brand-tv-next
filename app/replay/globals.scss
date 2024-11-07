@@ -119,6 +119,10 @@ h3 {
   font-weight: 400;
 }
 
+.mainsection {
+  margin-top: -25px;
+}
+
 aside .description h4 {
   font-size: 16px;
 }
@@ -126,7 +130,15 @@ aside .description h4 {
 .list-group-item-dark {
   background-color: $dark;
 }
+.subitems .nav-pills .nav-link.active.bg-primary {
+  background-color: $light !important;
+  border-color: $border-color;
+  color: $dark;
+}
 
+.subitems .nav-pills .nav-link.text-primary {
+  color: $dark !important;
+}
 .footer {
   z-index: 100;
 }

@@ -16,7 +16,7 @@ export type Item = {
     items: Item[];
   }) => {
     return (
-        <ul className="nav nav-pills">
+        <ul className="nav nav-pills mb-2">
         {items.map((item) => (
           <Tab
             key={path + item.slug}

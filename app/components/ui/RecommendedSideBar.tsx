@@ -9,7 +9,7 @@ export default function RecommendedSideBar(props: {
   const { slug } = props;
   return (
     <>
-      <h4 className="mt-4 mb-3 text-default ms-3">You might like</h4>
+      <h4 className="mt-0 mb-3 text-default ms-3">You might like</h4>
 
       <aside className="bg-secondary bg-gradient rounded-4 p-2 p-sm-3">
         {Array.from({ length: 6 }).map((_, i) => (

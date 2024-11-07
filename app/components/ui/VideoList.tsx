@@ -7,7 +7,7 @@ export default function VideoList(props:{catName: string | undefined, slug: stri
     const category =  catName? catName : 'All';
   return (
     <>
-      <h6 className="mt-2 mb-3 text-default ms-3 fw-normal">Featured / {category}</h6>
+      <h4 className="mt-2 mb-3 text-default ms-3 fw-normal">{category}</h4>
 
       <div className="row">
         {Array.from({ length: 16 }).map((_, i) => (

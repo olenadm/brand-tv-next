@@ -14,7 +14,6 @@ export default async function Page(props: {
 
   return (
     <>
-      <h3 className="mt-3 mb-4">Video name</h3>
       <div className="ind">
         <Video slug="videos/promvideo" name="Video Name" id={1} />
         <VideoDescription />

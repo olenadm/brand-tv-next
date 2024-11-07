@@ -1,3 +1,18 @@
+export const maincategories = [
+  {
+    name: "Featured",
+    slug: "featured",
+  },
+  {
+    name: "Recommended",
+    slug: "recommended",
+  },
+  {
+    name: "You might like",
+    slug: "youlike",
+  },
+  
+];
 export const categories = [
   {
     name: "Our Company",
