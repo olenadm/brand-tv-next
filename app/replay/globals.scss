@@ -12,11 +12,19 @@ $theme-colors: (
 $border: 1px solid rgb(17 24 39 / 0.05);
 $border-color: rgb(17 24 39 / 0.07);
 $light: rgb(249 250 251 / 1);
+$dark: #021e42;
 $navbar-light-color: rgb(17 24 39);
 $navbar-dark-color: #fff;
 $default-hover: rgba(0, 0, 0, 0.08);
 $hero-gradient-start: #021e42;
 $hero-gradien-end: rgba(2, 30, 66, 1);
+
+$list-group-bg: $dark;
+$list-group-border-color: $border-color;
+$list-group-active-color: $hero-gradien-end;
+$list-group-color: #fff;
+$list-group-action-active-color: #fff;
+$list-group-action-active-bg: $hero-gradien-end;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -93,7 +101,7 @@ h3 {
   display: block;
   margin-right: 10px;
   background-color: transparent;
-  position:absolute;
+  position: absolute;
 }
 .play {
   border-radius: 50%;
@@ -104,6 +112,10 @@ h3 {
 .navButton:hover {
   background-color: $default-hover;
   color: #fff;
+}
+
+.list-group-item-dark {
+  background-color: $dark;
 }
 
 .footer {
@@ -150,7 +162,6 @@ footer a:visited {
   .videoplaceholder {
     min-height: 80px;
   }
-  
 }
 
 @media (min-width: 1400px) {
@@ -168,5 +179,4 @@ footer a:visited {
   .ind .videoplaceholder {
     min-height: 450px;
   }
-
 }

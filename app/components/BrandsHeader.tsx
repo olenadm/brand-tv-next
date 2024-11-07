@@ -4,6 +4,7 @@ import Link from "next/link";
 import OffcanvasSide from "./sidebar/Offcanvas";
 
 const BrandsHeader: React.FC = () => {
+  const branding = 'replay.png';
   return (
     <Navbar
       className="bg-dark"
@@ -14,10 +15,10 @@ const BrandsHeader: React.FC = () => {
     >
      
       <Container className="px-xl-3">
-      <OffcanvasSide />
+      <OffcanvasSide dark={true} branding={branding} />
         <Link href="/replay" className="navbar-brand mx-auto mx-md-0 ms-md-3" scroll={false}>
           <Image
-            src="/replay.png"
+            src={`/${branding}`}
             alt="Logo"
             className="logo ms-md-4 ms-lg-0"
             width={200}

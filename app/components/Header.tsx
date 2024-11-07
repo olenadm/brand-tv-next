@@ -3,7 +3,7 @@
 import { Navbar, Container, NavLink, Nav } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
-import OffcanvasSide from "./sidebar/Offcanvas";
+// import OffcanvasSide from "./sidebar/Offcanvas";
 
 const Header: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
     >
      
       <Container>
-      <OffcanvasSide />
+      
         <Link href="/brandtv" className="navbar-brand mx-auto mx-md-0 ms-md-3" scroll={false}>
           <Image
             src="/brand-tv-banner.png"
