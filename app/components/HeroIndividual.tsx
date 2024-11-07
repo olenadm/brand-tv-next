@@ -31,7 +31,7 @@ const HeroIndividual: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-8 col-xxl-8  d-xl-block text-center order-0 order-sm-2">
+            <div className="col-xl-8 col-xxl-8  d-xl-block text-center order-0 order-lg-2">
             <Video slug='videos/promvideo' name='Video' id={1}/>
             </div>
           </div>
