@@ -12,7 +12,7 @@ export default async function Page(props: {
   const catName = cat?.name;
 
   return (
-    <div className='p-3 border rounded-4 mb-5 ms-3'>
+    <div className='p-3 border rounded-4 mb-5 ms-md-3'>
      
        <VideoList catName={catName}  slug='videos/promvideo' />
            
