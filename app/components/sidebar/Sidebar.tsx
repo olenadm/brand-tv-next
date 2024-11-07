@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <div className={classname}>
       <nav>
-        <OffcanvasSide />
+        <OffcanvasSide  dark={true} branding=""/>
       </nav>
     </div>
   );
