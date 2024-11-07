@@ -3,6 +3,8 @@ import { Container } from "react-bootstrap";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import '@/app/brandtv/globals.scss'
+
 export default async function Layout({
   children,
   //recommended,

@@ -75,12 +75,17 @@ body {
   margin-right:10px;
   width: 50px;
   height:50px;
-  position:absolute;
 }
 .play {
   border-radius: 50%;
   width: 42px;
   height: 42px;
+}
+
+.description h6 span {font-weight:400}
+
+aside .description h4 {
+  font-size: 16px;
 }
 
 .navButton:hover {
@@ -130,6 +135,14 @@ footer a:visited {
 @media (min-width: 1024px) {
   .videoplaceholder {
     min-height: 80px;
+  }
+  aside .videoplaceholder{
+    height:80px;
+  }
+  aside .videoplaceholder .play{
+    height:30px;
+    width:30px;
+    font-size:10px;
   }
 }
 

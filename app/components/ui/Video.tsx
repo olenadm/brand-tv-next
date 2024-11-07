@@ -12,7 +12,7 @@ export default function Video(props: {
   id: number | undefined;
 }) {
 
-  const { slug, id, name } = props;
+  const { slug } = props;
   const url = `/${slug}/`;
 
   return (
@@ -20,9 +20,7 @@ export default function Video(props: {
       <Card className="rounded-3 mb-3 videoplaceholder text-center">
         <CardBody className="d-flex justify-content-center align-items-center">
           <div>
-            <p className="mb-0">
-              {name} {id}
-            </p>
+            
             <Link
               href={url}
               scroll={true}
