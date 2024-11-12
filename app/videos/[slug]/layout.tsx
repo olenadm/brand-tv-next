@@ -1,20 +1,20 @@
-'use client'
+"use client";
 
 import BrandsFooter from "@/app/components/BrandsFooter";
 import BrandsHeader from "@/app/components/BrandsHeader";
 import { Container } from "react-bootstrap";
 import { Racing_Sans_One } from "next/font/google";
 const racing = Racing_Sans_One({ weight: "400", subsets: ["latin"] });
-import '@/app/replay/globals.scss'
+import "@/app/replay/globals.scss";
 
-export default  function Layout({
+export default function Layout({
   children,
-  //recommended,
-  youmightlike,
-}: {
+}: //recommended,
+// youmightlike,
+{
   children: React.ReactNode;
   // recommended: React.ReactNode;
-  youmightlike: React.ReactNode;
+  // youmightlike: React.ReactNode;
 }) {
   // const params = await props.params;
 
@@ -29,7 +29,6 @@ export default  function Layout({
         }
       `}</style>
       <BrandsHeader />
-     
 
       <Container>
         <div className="row gx-lg-5">

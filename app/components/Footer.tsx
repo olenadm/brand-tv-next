@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 const Footer: React.FC = () => {
   return (
