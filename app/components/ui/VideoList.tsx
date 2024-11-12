@@ -1,6 +1,7 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import Video from "./Video";
+import VideoDescription from "./VideoDescription";
 
 export default function VideoList(props: {
   catName: string | undefined;
@@ -16,6 +17,7 @@ export default function VideoList(props: {
         {Array.from({ length: 8 }).map((_, i) => (
           <Col key={i} sm={3} md={6} lg={3}>
             <Video slug={slug} name="Video" id={i + 1} />
+            <VideoDescription />
           </Col>
         ))}
       </div>
