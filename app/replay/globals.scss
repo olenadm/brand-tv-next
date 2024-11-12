@@ -17,7 +17,7 @@ $navbar-light-color: rgb(17 24 39);
 $navbar-dark-color: #fff;
 $default-hover: rgba(0, 0, 0, 0.08);
 $hero-gradient-start: #021e42;
-$hero-gradien-end: rgba(2, 30, 66, 1);
+$hero-gradien-end: rgb(2, 45, 102);
 
 $list-group-bg: $dark;
 $list-group-border-color: $border-color;
@@ -52,10 +52,11 @@ h3 {
 .hero {
   background-color: $hero-gradient-start;
   background-image: linear-gradient(
-    17deg,
+    75deg,
     $hero-gradient-start 10%,
-    $hero-gradien-end 100%
+    $hero-gradien-end 60%
   );
+  
 
   color: #fff;
 }
@@ -89,7 +90,7 @@ h3 {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 .hero .videoplaceholder {
-  min-height: 300px;
+  min-height: 320px;
 }
 
 .navButton {

@@ -1,10 +1,9 @@
 import VideoList from "../components/ui/VideoList";
 
-
 export default function Page() {
   return (
-    
-      <VideoList catName="All"  slug='videos/promvideo' />
-    
+    <div className="p-3 border rounded-4 mb-5">
+      <VideoList catName="All" slug="videos/promvideo" />
+    </div>
   );
 }

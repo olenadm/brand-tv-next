@@ -1,15 +1,9 @@
-// import Image from "next/image";
-
-import ExampleComponents from "../components/ExampleComponents";
-
-
+import Hero from "../components/Hero";
 
 export default function Home() {
   return (
     <>
-      
-      <ExampleComponents />
-     
+      <Hero />
     </>
   );
 }

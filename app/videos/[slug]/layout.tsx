@@ -33,10 +33,9 @@ export default  function Layout({
 
       <Container>
         <div className="row gx-lg-5">
-          <div className="col-md-8 px-lg-3 mt-4">
+          <div className="col-md-12 px-lg-4 mt-4">
             <div>{children}</div>
           </div>
-          <div className="col-md-4 px-lg-3 mt-4">{youmightlike}</div>
         </div>
       </Container>
       <BrandsFooter />

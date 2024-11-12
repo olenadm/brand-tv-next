@@ -1,18 +1,17 @@
 import { Container } from "react-bootstrap";
-// import Sidebar from "../components/sidebar/Sidebar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import '@/app/brandtv/globals.scss'
+import "@/app/brandtv/globals.scss";
 
 export default async function Layout({
   children,
-  //recommended,
-  youmightlike,
-}: {
+}: //recommended,
+//youmightlike,
+{
   children: React.ReactNode;
   // recommended: React.ReactNode;
-  youmightlike: React.ReactNode;
+  //youmightlike: React.ReactNode;
 }) {
   // const params = await props.params;
 
@@ -22,10 +21,9 @@ export default async function Layout({
 
       <Container className="px-lg-5">
         <div className="row gx-lg-5">
-          <div className="col-md-8 px-lg-3 mt-4">
+          <div className="col-md-12">
             <div>{children}</div>
           </div>
-          <div className="col-md-4 px-lg-3 mt-4">{youmightlike}</div>
         </div>
       </Container>
       <Footer />

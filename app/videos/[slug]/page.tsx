@@ -1,4 +1,4 @@
-import DescriptionAlert from "@/app/components/ui/DescriptionAlert";
+import Signup from "@/app/components/ui/Signup";
 import Video from "@/app/components/ui/Video";
 import VideoDescription from "@/app/components/ui/VideoDescription";
 
@@ -10,7 +10,6 @@ export default async function Page(props: {
 
   // const videoContent = videos.find((vid) => vid.slug === video);
 
-  console.log(video);
 
   return (
     <>
@@ -18,7 +17,7 @@ export default async function Page(props: {
         <Video slug="videos/promvideo" name="Video Name" id={1} />
         <VideoDescription />
 
-        <DescriptionAlert />
+        <Signup />
       </div>
     </>
   );
