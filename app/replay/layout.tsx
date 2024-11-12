@@ -27,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <HeroIndividual />
       <section className='rounded-top-5 mainsection bg-white'>
-      <Container fluid className='px-lg-5 mt-3'>
+      <Container  className='px-lg-5 mt-3'>
         <div className="row">
           <div className="col px-lg-3 mt-4">
             <TabGroup
