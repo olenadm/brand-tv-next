@@ -1,9 +1,14 @@
 import React from "react";
 
-export default function VideoDescription() {
+export default function VideoDescription(props: {
+  name: string | undefined;
+  
+}) {
+  const { name } = props;
+
   return (
     <div className="description">
-      <h4 className="mt-0">Video name</h4>
+      <h5 className="mt-0">{name}</h5>
       <h6 className='mb-1'>
         Actors:{" "}
         <span>

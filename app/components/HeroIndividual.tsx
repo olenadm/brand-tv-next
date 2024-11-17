@@ -1,10 +1,13 @@
-
 import Signup from "./ui/Signup";
-import Video from "./ui/Video";
+import { videos } from "../api/categories/data";
+import Ratio from "react-bootstrap/Ratio";
+
 const HeroIndividual: React.FC = () => {
+  const video = videos.find((vid) => vid.id === "1");
+
   return (
     <>
-      <header className="pt-4 pb-5 hero border-bottom" id='top'>
+      <header className="pt-4 pb-5 hero border-bottom" id="top">
         <div className="container px-md-5">
           <div className="row gx-md-5 align-items-center justify-content-center">
             <div className="col-lg-8 col-xl-4 col-xxl-4  order-1">
@@ -25,18 +28,22 @@ const HeroIndividual: React.FC = () => {
                   >
                     Join <i className="bi bi-plus"></i>
                   </a>
-                  <a className="btn btn-outline-primary btn-md px-4 rounded-5" href="#!">
+                  <a
+                    className="btn btn-outline-primary btn-md px-4 rounded-5"
+                    href="#!"
+                  >
                     Learn More
                   </a>
-                
                 </div>
               </div>
             </div>
             <div className="col-xl-8 col-xxl-8  d-xl-block text-center order-0 order-lg-2">
-            <Video slug='videos/promvideo' name='Video' id={1}/>
+              <Ratio aspectRatio={1 / 2}>
+                <iframe src={`${video?.url}`} width="100%" allowFullScreen />
+              </Ratio>
             </div>
           </div>
-          <Signup/>
+          <Signup />
         </div>
       </header>
     </>

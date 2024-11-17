@@ -1,4 +1,4 @@
-import Video from "./ui/Video";
+import { Ratio } from "react-bootstrap";
 import Signup from "./ui/Signup";
 const Hero: React.FC = () => {
   return (
@@ -28,7 +28,14 @@ const Hero: React.FC = () => {
               </div>
             </div>
             <div className="col-xl-5 col-xxl-6  text-center  order-0 order-lg-2">
-              <Video slug="promvideo" name="Video" id={1} />
+              <Ratio aspectRatio={1 / 2}>
+                <iframe
+                  src="https://player.vimeo.com/video/1030054596?h=6943a233d4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  width="100%"
+                  height="400px"
+                  allowFullScreen
+                />
+              </Ratio>
             </div>
           </div>
         </div>

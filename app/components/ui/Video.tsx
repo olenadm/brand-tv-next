@@ -1,35 +1,37 @@
-'use client'
+"use client";
 
 import React from "react";
-import { Card, CardBody } from "react-bootstrap";
+import { Card, CardBody, Ratio } from "react-bootstrap";
 import Link from "next/link";
- 
-
 
 export default function Video(props: {
   slug: string | undefined;
   name: string | undefined;
-  id: number | undefined;
+  id: string | undefined;
+  videoUrl: string | undefined;
 }) {
-
-  const { slug } = props;
-  const url = `/${slug}/`;
+  const { slug, name, videoUrl } = props;
+  const slug_url = `${slug}`;
 
   return (
     <>
       <Card className="rounded-3 mb-3 videoplaceholder text-center">
-        <CardBody className="d-flex justify-content-center align-items-center">
-          <div>
-            
-            <Link
-              href={url}
-              scroll={true}
-                         
-              className="btn btn-default play my-4 text-center bg-gradient"
-            >
-              <i className="bi bi-play-fill"></i>
-            </Link>
-          </div>
+        <CardBody className='px-0'>
+          <Ratio aspectRatio={1 / 2}>
+            <iframe
+              src={`${videoUrl}?embedparameter=value&controls=false`}
+              width="100%"
+            />
+          </Ratio>
+
+          <Link
+            href={slug_url}
+            scroll={true}
+            title={name}
+            className="my-2 text-center d-block bg-gradientd-block btn btn-primary"
+          >
+            Watch Video
+          </Link>
         </CardBody>
       </Card>
     </>
