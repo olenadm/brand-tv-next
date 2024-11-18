@@ -23,7 +23,9 @@ export default async function Page(props: {
           </Ratio>
         </div>
 
-        <VideoDescription name={videoContent?.name} />
+        <div className="mx-3 px-md-5 mt-3">
+          <VideoDescription name={videoContent?.name} />
+        </div>
         <Signup />
       </div>
     </>
