@@ -9,15 +9,15 @@ export default function Signup() {
             <aside className="bg-primary bg-gradient rounded-4 p-4 p-sm-5">
               <div className="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
                 <div className="mb-4 mb-xl-0">
-                  <div className="fs-3 fw-bold text-white">
+                  {/* <div className="fs-3 fw-bold text-white">
                     New products, delivered to you.
-                  </div>
+                  </div> */}
                   <div className="text-white-50">
-                    Sign up for our newsletter for the latest updates.
+                  Contact us at hi@brandtv.ai
                   </div>
                 </div>
                 <div className="ms-xl-4">
-                  <div className="input-group mb-2">
+                  {/* <div className="input-group mb-2">
                     <input
                       className="form-control"
                       type="text"
@@ -32,9 +32,9 @@ export default function Signup() {
                     >
                       Sign up
                     </button>
-                  </div>
+                  </div> */}
                   <div className="small text-white-50">
-                    We care about privacy, and will never share your data.
+                    Brand TV Ltd. Copyright. We care about privacy, and will never share your data.
                   </div>
                 </div>
               </div>

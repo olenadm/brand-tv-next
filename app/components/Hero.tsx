@@ -1,5 +1,5 @@
 import { Ratio } from "react-bootstrap";
-
+import Signup from "./ui/Signup";
 const Hero: React.FC = () => {
   return (
     <>
@@ -38,6 +38,7 @@ const Hero: React.FC = () => {
         </div>
       </header>
 
+      <Signup />
     </>
   );
 };
