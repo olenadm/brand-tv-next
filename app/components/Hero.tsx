@@ -12,10 +12,7 @@ const Hero: React.FC = () => {
                   Lorem ipsum headline
                 </h1>
                 <p className="lead fw-normal text-primary-50 mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                  est, ut esse a labore aliquam beatae expedita. Blanditiis
-                  impedit numquam libero molestiae et fugit cupiditate,
-                  quibusdam expedita, maiores eaque quisquam.
+                Brand TV brings your video and fans together in one place, to build a vibrant community, where followers become fans and fans become advocates. 
                 </p>
                 <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                   <a
