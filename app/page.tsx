@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Hero from "./components/Hero";
 
-import { Container, Row, Col, Card, CardBody } from "react-bootstrap";
-
 export default function Home() {
   return (
     <Hero />
