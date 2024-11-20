@@ -1,9 +1,12 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Hero from "./components/Hero";
-
+import Header from "./components/Header";
 export default function Home() {
   return (
+    <>
+    <Header />
     <Hero />
+    </>
     // <>
     //   <Container className="my-auto px-5">
     //     <Row><Col><h1 className='my-5'>Please choose demo site</h1></Col></Row>
