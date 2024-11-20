@@ -34,7 +34,7 @@ export default function Signup() {
                     </button>
                   </div> */}
                   <div className="small text-white-50">
-                    Brand TV Ltd. Copyright. We care about privacy, and will never share your data.
+                    Brand TV Ltd. Copyright 2024
                   </div>
                 </div>
               </div>
