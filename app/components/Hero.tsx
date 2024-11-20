@@ -9,18 +9,18 @@ const Hero: React.FC = () => {
             <div className="col-lg-8 col-xl-7 col-xxl-6 order-1">
               <div className="my-3 my-lg-5 text-center text-xl-start h-100">
                 <h1 className="display-5 fw-bolder mb-2">
-                  Lorem ipsum headline
+                  Our mission
                 </h1>
                 <p className="lead fw-normal text-primary-50 mb-4">
                 Brand TV brings your video and fans together in one place, to build a vibrant community, where followers become fans and fans become advocates. 
                 </p>
                 <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                  <a
+                  {/* <a
                     className="btn btn-primary btn-lg px-4 me-sm-3 text-white"
                     href="#features"
                   >
                     Get Started
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
         </div>
       </header>
 
-      <Signup />
+      {/* <Signup /> */}
     </>
   );
 };
