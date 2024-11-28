@@ -94,6 +94,10 @@ h3 {
 }
 
 .nav-pills .nav-link.active{background-color: #e60e2d96;}
+.nav-fill > .nav-link, .nav-fill .nav-item{text-align:left; color: #fff; text-decoration: none;}
+.dropdown-menu{
+  --bs-dropdown-bg: #021e42;
+}
 
 .navButton {
   border-radius: 50%;
@@ -165,6 +169,7 @@ footer a:visited {
   .videoplaceholder {
     min-height: 80px;
   }
+  .nav-link {text-align:left; }
 }
 
 @media (max-width: 767px) {

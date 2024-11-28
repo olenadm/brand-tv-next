@@ -3,6 +3,7 @@ import { TabGroup } from "../components/ui/TabGroup";
 import { Container } from "react-bootstrap";
 
 import HeroIndividual from "../components/HeroIndividual";
+import ModalForm from "../components/ui/ModalForm";
 
 import { categories } from "../api/categories/data";
 import BrandsHeader from "../components/BrandsHeader";
@@ -11,8 +12,14 @@ import { Racing_Sans_One } from "next/font/google";
 const racing = Racing_Sans_One({ weight: "400", subsets: ["latin"] });
 
 import "./globals.scss";
+import { useState } from "react";
+
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <style jsx global>{`
@@ -23,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           font-family: ${racing.style.fontFamily};
         }
       `}</style>
-      <BrandsHeader />
+      <BrandsHeader handleShow={handleShow}/>
 
       <HeroIndividual />
       <section className='rounded-top-5 mainsection bg-white'>
@@ -49,6 +56,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Container>
       </section>
       <BrandsFooter />
+      <ModalForm  handleClose={handleClose}  show={show}/>
+      
     </>
   );
 }
