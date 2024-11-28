@@ -6,6 +6,8 @@ import { Container } from "react-bootstrap";
 import { Racing_Sans_One } from "next/font/google";
 const racing = Racing_Sans_One({ weight: "400", subsets: ["latin"] });
 import "@/app/replay/globals.scss";
+import { useState } from "react";
+import ModalForm from "@/app/components/ui/ModalForm";
 
 export default function Layout({
   children,
@@ -17,6 +19,10 @@ export default function Layout({
   // youmightlike: React.ReactNode;
 }) {
   // const params = await props.params;
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <>
@@ -28,7 +34,7 @@ export default function Layout({
           font-family: ${racing.style.fontFamily};
         }
       `}</style>
-      <BrandsHeader />
+         <BrandsHeader handleShow={handleShow}/>
 
       <Container>
         <div className="row gx-lg-5">
@@ -38,6 +44,7 @@ export default function Layout({
         </div>
       </Container>
       <BrandsFooter />
+      <ModalForm  handleClose={handleClose}  show={show}/>
     </>
   );
 }
