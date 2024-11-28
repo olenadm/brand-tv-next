@@ -8,7 +8,7 @@ const HeroIndividual: React.FC = () => {
   return (
     <>
       <header className="pt-4 pb-5 hero border-bottom" id="top">
-        <div className="container px-md-5">
+        <div className="container">
           <div className="row gx-md-5 align-items-center justify-content-center">
             <div className="col-lg-8 col-xl-4 col-xxl-4  order-1">
               <div className="my-3 mt-lg-5 text-center text-xl-start">

@@ -13,11 +13,11 @@ const BrandsHeader: React.FC = () => {
       fixed="top"
       expand="lg"
     >
-      <Container className="px-xl-3">
+      <Container>
         <OffcanvasSide dark={true} branding={branding} />
         <Link
           href="/replay"
-          className="navbar-brand mx-auto mx-md-0 ms-md-3"
+          className="navbar-brand"
           scroll={false}
         >
           <Image
@@ -29,11 +29,23 @@ const BrandsHeader: React.FC = () => {
           />
         </Link>
 
-        {/* <Nav className="ms-auto d-none d-md-block">
-          <NavLink href="" eventKey="4">
-            Log In <i className="bi bi-arrow-right"></i>
-          </NavLink>
-        </Nav> */}
+        <ul className="ms-auto  nav nav-pills nav-fill" >
+          <li className='nav-item'>
+            <a href="https://replaysportscards.com" className="nav-link">
+              Home
+            </a>
+          </li>
+          <li className='nav-item'>
+            <a href="https://replaysportscards.com/shop" className="nav-link">
+              Shop
+            </a>
+          </li>
+          <li className='nav-item'>
+            <Link href="/replay/" className="nav-link active">
+              Community Channel
+            </Link>
+          </li>
+        </ul>
       </Container>
     </Navbar>
   );
