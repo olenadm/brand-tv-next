@@ -34,13 +34,19 @@ export default function VideoList(props: {
           videos_s.map((vid) => (
             <Col key={vid.id} sm={3} md={6} lg={3}>
               <Suspense fallback={<VideoSkeleton />}>
-                <Video
-                  slug={`${slug}/${vid.id}`}
-                  name={vid.name}
-                  id={vid.id}
-                  videoUrl={vid.url}
-                />
-                <VideoDescription name={vid.name} />
+                <div className="row">
+                  <Col xs={6} lg={12} className='px-1'>
+                    <Video
+                      slug={`${slug}${vid.id}`}
+                      name={vid.name}
+                      id={vid.id}
+                      videoUrl={vid.url}
+                    />
+                  </Col>
+                  <Col xs={6} lg={12}>
+                    <VideoDescription name={vid.name} />
+                  </Col>
+                </div>
               </Suspense>
             </Col>
           ))

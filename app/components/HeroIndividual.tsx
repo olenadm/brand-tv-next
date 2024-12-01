@@ -26,7 +26,7 @@ const HeroIndividual: React.FC = () => {
             </div>
           </div>
           <div className=" row align-items-center justify-content-between">
-            <div className="col-sm-6">
+            <div className="col-sm-6 col-md-12 col-lg-6">
               <h2 className="mb-4 text-primary">
                 Welcome to Replay Sports Cards new Community Channal powered by
                 BrandTV!
@@ -37,7 +37,7 @@ const HeroIndividual: React.FC = () => {
                 discounts,
               </p>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-6 col-md-12 col-lg-6">
               {" "}
               <SignupForm />
             </div>

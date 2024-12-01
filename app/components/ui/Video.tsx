@@ -28,7 +28,7 @@ export default function Video(props: {
             href={slug_url}
             scroll={true}
             title={name}
-            className="my-2 text-center d-block bg-gradientd-block btn btn-primary"
+            className="my-2 mx-2 text-center d-block bg-gradientd-block btn btn-primary"
           >
             Watch Video
           </Link>

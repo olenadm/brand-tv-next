@@ -4,12 +4,12 @@ export default function SignupForm() {
   return (
     <div className="row mt-5 mb-5 align-items-center justify-content-center">
       <div className="col-12 col-md-12 text-center">
-        <aside className="bg-primary bg-gradient rounded-4 p-4 p-sm-5">
+        <aside className="bg-primary bg-gradient rounded-4 p-4 p-sm-5 p-lg-3 p-xl-4">
           <div
             className="row align-items-center justify-content-between 
-         text-center text-xl-start"
+         text-center text-lg-start"
           >
-            <div className="col-sm-7">
+            <div className="col-sm-7 col-md-12 col-lg-7">
               <div className="fs-3 fw-bold text-white">
                 <h3>
                   Enter your email here to create your own FAN WALLET and we
@@ -17,7 +17,7 @@ export default function SignupForm() {
                 </h3>
               </div>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-5 col-md-12 col-lg-5">
               <div className="input-group mb-2">
                 <input
                   className="form-control"

@@ -36,7 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <section className='rounded-top-5 mainsection bg-white'>
       <Container  className='px-lg-5 mt-3'>
         <div className="row">
-          <div className="col px-lg-3 mt-4">
+          <div className="col px-lg-3 mt-lg-4">
             <TabGroup
               path="/replay"
               items={[

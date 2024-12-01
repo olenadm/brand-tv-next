@@ -14,7 +14,7 @@ export default async function Page(props: {
   const catSlug =  cat ? cat.slug : 'All';
 
   return (
-    <div className="p-3 border rounded-4 mb-5 ms-md-3">
+    <div className="p-lg-3 border rounded-4 mb-5 ms-md-3">
       <VideoList catName={catName} catSlug={catSlug} slug="/videos" />
     </div>
   );

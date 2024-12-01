@@ -16,7 +16,7 @@ export default async function Layout(props: {
   return (
     <div>
       <div className="row">
-        <div className="col ms-3 subitems mt-1">
+        <div className="col ms-lg-3 subitems mt-1">
           <TabGroup
           path={`/replay/${category.slug}`}
           items={[
