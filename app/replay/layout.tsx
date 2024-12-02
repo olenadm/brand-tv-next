@@ -1,6 +1,6 @@
 "use client";
 import { TabGroup } from "../components/ui/TabGroup";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 import HeroIndividual from "../components/HeroIndividual";
 import ModalForm from "../components/ui/ModalForm";
@@ -14,7 +14,7 @@ const racing = Racing_Sans_One({ weight: "400", subsets: ["latin"] });
 import "./globals.scss";
 import { useState } from "react";
 import LoginModal from "../components/ui/LoginModal";
-
+import CreateAndShare from "../components/ui/CreateAndShare";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState(false);
@@ -35,35 +35,43 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           font-family: ${racing.style.fontFamily};
         }
       `}</style>
-      <BrandsHeader handleShow={handleShow} handleShowLogin={handleShowLogin}/>
+      <BrandsHeader handleShow={handleShow} handleShowLogin={handleShowLogin} />
 
       <HeroIndividual />
-      <section className='rounded-top-5 mainsection bg-white'>
-      <Container  className='px-lg-5 mt-3'>
-        <div className="row">
-          <div className="col px-lg-3 mt-lg-4">
-            <TabGroup
-              path="/replay"
-              items={[
-                {
-                  text: "All",
-                },
-                ...categories.map((x) => ({
-                  text: x.name,
-                  slug: x.slug,
-                })),
-              ]}
-            />
-
-            <div>{children}</div>
-          </div>
-        </div>
+      <Container>
+        <Row>
+          <Col>
+            {" "}
+            <CreateAndShare />
+          </Col>
+        </Row>
       </Container>
+
+      <section className="rounded-top-5 mainsection bg-white">
+        <Container className="px-lg-5 mt-3">
+          <div className="row">
+            <div className="col px-lg-3 mt-lg-4">
+              <TabGroup
+                path="/replay"
+                items={[
+                  {
+                    text: "All",
+                  },
+                  ...categories.map((x) => ({
+                    text: x.name,
+                    slug: x.slug,
+                  })),
+                ]}
+              />
+
+              <div>{children}</div>
+            </div>
+          </div>
+        </Container>
       </section>
       <BrandsFooter />
-      <ModalForm  handleClose={handleClose}  show={show}/>
-      <LoginModal  handleClose={handleCloseLogin}  show={showLogin}/>
-      
+      <ModalForm handleClose={handleClose} show={show} />
+      <LoginModal handleClose={handleCloseLogin} show={showLogin} />
     </>
   );
 }
