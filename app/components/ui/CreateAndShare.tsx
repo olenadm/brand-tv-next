@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function CreateAndShare() {
   return (
@@ -33,10 +34,13 @@ export default function CreateAndShare() {
             </div>
             <div className="col-sm-6 col-md-12 col-lg-6">
               <div className="small text-white-50">
-                <div
-                  className="videoplaceholder p-5 my-2 rounded-2 bg-primary border-white"
-                  style={{ height: "200px" }}
-                ></div>
+                <Image
+                  src="/promo.PNG"
+                  alt="Promo"
+                  className="img-fluid mb-3"
+                  width={700}
+                  height={350}
+                />
                 Brand TV Ltd. Copyright 2024
               </div>
             </div>
