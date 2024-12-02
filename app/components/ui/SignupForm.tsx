@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function SignupForm() {
+const SignupForm = (props: {
+  handleShow: () => void;
+ 
+}) => {
+  const { handleShow } = props;
   return (
     <div className="row mt-5 mb-5 align-items-center justify-content-center">
       <div className="col-12 col-md-12 text-center">
@@ -19,28 +23,28 @@ export default function SignupForm() {
             </div>
             <div className="col-sm-5 col-md-12 col-lg-5">
               <div className="input-group mb-2">
-                <input
+                {/* <input
                   className="form-control"
                   type="text"
                   placeholder="Email address..."
                   aria-label="Email address..."
                   aria-describedby="button-newsletter"
-                />
+                />*/}
                 <button
-                  className="btn btn-outline-light"
+                  className="btn btn-outline-light w-100"
                   id="button-newsletter"
                   type="button"
+                  onClick={handleShow}
                 >
-                  Sign up
+                 <i className="bi bi-plus me-2"></i> Sign Up
                 </button>
               </div>
-              <div className="small text-white-50">
-                Brand TV Ltd. Copyright 2024
-              </div>
+             
             </div>
           </div>
         </aside>
       </div>
     </div>
   );
-}
+};
+export default SignupForm;

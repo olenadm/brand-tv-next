@@ -2,19 +2,18 @@ import { videos } from "../api/categories/data";
 import Ratio from "react-bootstrap/Ratio";
 import SignupForm from "./ui/SignupForm";
 
-
-const HeroIndividual: React.FC = () => {
+const HeroIndividual = (props: { handleShow: () => void }) => {
   const video = videos.find((vid) => vid.id === "1");
+  const { handleShow } = props;
 
   return (
     <>
       <header className="pt-4 pb-5 hero border-bottom" id="top">
         <div className="container">
-          
           <div className=" row align-items-center justify-content-between">
             <div className="col-sm-6 col-md-12 col-lg-6">
               <h2 className="mb-4 text-primary">
-              Welcome to Replay Sports Cards new Community Channel!
+                Welcome to Replay Sports Cards new Community Channel!
               </h2>
               <p className="lead fw-normal text-primary-50 mb-4">
                 Make sure you sign up to get our latest promotions and offers.
@@ -24,7 +23,7 @@ const HeroIndividual: React.FC = () => {
             </div>
             <div className="col-sm-6 col-md-12 col-lg-6">
               {" "}
-              <SignupForm />
+              <SignupForm handleShow={handleShow} />
             </div>
           </div>
 

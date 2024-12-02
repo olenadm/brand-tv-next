@@ -37,7 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       `}</style>
       <BrandsHeader handleShow={handleShow} handleShowLogin={handleShowLogin} />
 
-      <HeroIndividual />
+      <HeroIndividual handleShow={handleShow}  />
       <Container>
         <Row>
           <Col>

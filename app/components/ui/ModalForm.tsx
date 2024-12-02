@@ -15,19 +15,19 @@ export default function ModalForm(props: {
         <Container>
           <Row>
             <Col sm={4} className="border-right bg-light p-3">
-              <h6>
+              <h6 className='mb-3'>
                 Enter your details to join the Replay Sports Cards - <br />{" "}
                 BrandTV Community
               </h6>
 
               <div className="row">
                 <div className="col d-flex align-items-start">
-                  <div className="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <div className="icon-square p-2 rouded-2 text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                     <i className="bi bi-envelope-at"></i>
                   </div>
 
                   <div>
-                    <h4 className="fs-2 text-body-emphasis">Email</h4>
+                    <h6 className="mb-2">Email</h6>
                     <p>hi@brandtv.com</p>
                   </div>
                 </div>
@@ -35,22 +35,18 @@ export default function ModalForm(props: {
 
               <div className="row g-4">
                 <div className="col d-flex align-items-start">
-                  <div className="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                  <div className="icon-square  p-2 rounded-2 text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                     <i className="bi bi-geo-alt"></i>
                   </div>
 
                   <div>
-                    <h4 className="fs-2 text-body-emphasis">Address</h4>
+                    <h6 className="mb-2">Address</h6>
                     <p>Miami, USA, London, UK</p>
                   </div>
                 </div>
               </div>
 
-              <div className="row mt-2">
-                <div className="col">
-                  <h6>Follow us:</h6>
-                </div>
-              </div>
+           
               <Row className="text-center mt-3">
                 <Col xs={4}>
                   <a href="#">
