@@ -1,8 +1,7 @@
 import { videos } from "../api/categories/data";
 import Ratio from "react-bootstrap/Ratio";
 import SignupForm from "./ui/SignupForm";
-import Link from "next/link";
-import Image from "next/image";
+
 
 const HeroIndividual: React.FC = () => {
   const video = videos.find((vid) => vid.id === "1");
@@ -11,25 +10,11 @@ const HeroIndividual: React.FC = () => {
     <>
       <header className="pt-4 pb-5 hero border-bottom" id="top">
         <div className="container">
-          <div className="row">
-            <div className="col text-end">
-              <span className="me-2 text-50">Powered by</span>
-              <Link href="/">
-                <Image
-                  src="/brand-tv-banner.jpeg"
-                  alt="Logo"
-                  className="float-end d-block"
-                  width={90}
-                  height={30}
-                />
-              </Link>
-            </div>
-          </div>
+          
           <div className=" row align-items-center justify-content-between">
             <div className="col-sm-6 col-md-12 col-lg-6">
               <h2 className="mb-4 text-primary">
-                Welcome to Replay Sports Cards new Community Channal powered by
-                BrandTV!
+              Welcome to Replay Sports Cards new Community Channel!
               </h2>
               <p className="lead fw-normal text-primary-50 mb-4">
                 Make sure you sign up to get our latest promotions and offers.

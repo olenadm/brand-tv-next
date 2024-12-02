@@ -10,9 +10,9 @@ export default function CreateAndShare() {
             className="row gx-lg-5 align-items-center justify-content-between 
          text-center text-lg-start"
           >
-            <div className="col-sm-6 col-md-12 col-lg-6">
+            <div className="col-sm-5 col-md-12 col-lg-5">
               <div className="fs-3 fw-bold text-white">
-                <h3>Create and share more content like this to win rewards</h3>
+                <h3 className='mb-3'>Subscribe here to win more content</h3>
 
                 <div className="input-group mb-2">
                   <input
@@ -32,16 +32,16 @@ export default function CreateAndShare() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-md-12 col-lg-6">
+            <div className="col-sm-7 col-md-12 col-lg-7">
               <div className="small text-white-50">
                 <Image
-                  src="/promo.PNG"
+                  src="/promo.png"
                   alt="Promo"
-                  className="img-fluid mb-3"
+                  className="img-fluid mb-3 rounded-2"
                   width={700}
                   height={350}
                 />
-                Brand TV Ltd. Copyright 2024
+               
               </div>
             </div>
           </div>

@@ -11,10 +11,10 @@ export default function SignupForm() {
           >
             <div className="col-sm-7 col-md-12 col-lg-7">
               <div className="fs-3 fw-bold text-white">
-                <h3>
+                <h5>
                   Enter your email here to create your own FAN WALLET and we
                   will be in touch
-                </h3>
+                </h5>
               </div>
             </div>
             <div className="col-sm-5 col-md-12 col-lg-5">

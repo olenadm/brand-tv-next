@@ -6,7 +6,7 @@ const BrandsFooter: React.FC = () => {
       <Container>
         <Row className="d-none d-md-block">
           <Col>
-          <p className="text-white mb-0">Copyright <a href='/brandtv'>brand.tv</a></p>
+          <p className="text-white mb-0">Powered by <a href='/brandtv'>brand.tv</a></p>
           </Col>
         </Row>
       
