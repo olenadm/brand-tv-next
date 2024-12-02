@@ -15,7 +15,17 @@ export default function ModalForm(props: {
         <Container>
           <Row>
             <Col sm={4} className="border-right bg-light p-3">
-              <h6 className='mb-3'>
+
+            <button className="btn btn-dark my-1  w-100">
+                  Sign in with Apple <i className="bi bi-apple ms-3"></i>
+                </button>
+                <button className="btn btn-dark my-1  w-100">
+                  Sign in with Google <i className="bi bi-google ms-3"></i>
+                </button>
+                <button className="btn btn-dark my-1  w-100">
+                  Sign in with Facebook <i className="bi bi-facebook ms-3"></i>
+                </button>
+              <h6 className="my-3">
                 Enter your details to join the Replay Sports Cards - <br />{" "}
                 BrandTV Community
               </h6>
@@ -46,8 +56,7 @@ export default function ModalForm(props: {
                 </div>
               </div>
 
-           
-              <Row className="text-center mt-3">
+              <Row className="text-center mt-2">
                 <Col xs={4}>
                   <a href="#">
                     <i className="bi bi-twitter-x"></i>
