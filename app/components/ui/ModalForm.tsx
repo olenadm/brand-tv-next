@@ -9,26 +9,22 @@ export default function ModalForm(props: {
   return (
     <Modal show={show} onHide={handleClose} centered size="lg">
       <Modal.Header closeButton>
-        <Modal.Title>Sign Up</Modal.Title>
+        <h5>Enter your details to join the Replay Sports Cards - BrandTV Community
+        </h5>
       </Modal.Header>
       <Modal.Body>
         <Container>
           <Row>
-            <Col sm={4} className="border-right bg-light p-3">
-
-            <button className="btn btn-dark my-1  w-100">
-                  Sign in with Apple <i className="bi bi-apple ms-3"></i>
-                </button>
-                <button className="btn btn-dark my-1  w-100">
-                  Sign in with Google <i className="bi bi-google ms-3"></i>
-                </button>
-                <button className="btn btn-dark my-1  w-100">
-                  Sign in with Facebook <i className="bi bi-facebook ms-3"></i>
-                </button>
-              <h6 className="my-3">
-                Enter your details to join the Replay Sports Cards - <br />{" "}
-                BrandTV Community
-              </h6>
+            <Col sm={4} className="border-right bg-light pt-2 pb-3 px-3">
+              <button className="btn btn-dark my-1  w-100">
+                Sign in with Apple <i className="bi bi-apple ms-3"></i>
+              </button>
+              <button className="btn btn-dark my-1  w-100">
+                Sign in with Google <i className="bi bi-google ms-3"></i>
+              </button>
+              <button className="btn btn-dark my-1  w-100">
+                Sign in with Facebook <i className="bi bi-facebook ms-3"></i>
+              </button>
 
               <div className="row">
                 <div className="col d-flex align-items-start">
@@ -74,7 +70,7 @@ export default function ModalForm(props: {
                 </Col>
               </Row>
             </Col>
-            <Col sm={8}>
+            <Col sm={8} className="pt-2">
               <Form>
                 <Form.Group className="mb-3" controlId="exampleForm.name">
                   <Form.Label>Name *</Form.Label>
