@@ -3,8 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 // import OffcanvasSide from "./sidebar/Offcanvas";
 
-const BrandsHeader = (props: { handleShow: () => void }) => {
-  const { handleShow } = props;
+const BrandsHeader = (props: {
+  handleShow: () => void;
+  handleShowLogin: () => void;
+}) => {
+  const { handleShow, handleShowLogin } = props;
   const branding = "replay.png";
   return (
     <>
@@ -16,7 +19,6 @@ const BrandsHeader = (props: { handleShow: () => void }) => {
         expand="lg"
       >
         <Container>
-        
           {/*<OffcanvasSide dark={true} branding={branding} />*/}
           <Link href="/replay" className="navbar-brand" scroll={false}>
             <Image
@@ -50,9 +52,9 @@ const BrandsHeader = (props: { handleShow: () => void }) => {
                 <i className="bi bi-plus me-2"></i> Sign Up
               </button>
 
-              <Link href="/replay/" className="nav-link px-3">
+              <button className="nav-link px-3" onClick={handleShowLogin}>
                 <i className="bi bi-person-video2 me-2"></i> Login
-              </Link>
+              </button>
 
               <NavDropdown title="Username" id="collapsible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

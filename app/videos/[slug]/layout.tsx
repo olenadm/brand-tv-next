@@ -8,6 +8,7 @@ const racing = Racing_Sans_One({ weight: "400", subsets: ["latin"] });
 import "@/app/replay/globals.scss";
 import { useState } from "react";
 import ModalForm from "@/app/components/ui/ModalForm";
+import LoginModal from "@/app/components/ui/LoginModal";
 
 export default function Layout({
   children,
@@ -20,9 +21,13 @@ export default function Layout({
 }) {
   // const params = await props.params;
   const [show, setShow] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCloseLogin = () => setShowLogin(false);
+  const handleShowLogin = () => setShowLogin(true);
 
   return (
     <>
@@ -34,7 +39,7 @@ export default function Layout({
           font-family: ${racing.style.fontFamily};
         }
       `}</style>
-         <BrandsHeader handleShow={handleShow}/>
+      <BrandsHeader handleShow={handleShow} handleShowLogin={handleShowLogin} />
 
       <Container>
         <div className="row gx-lg-5">
@@ -44,7 +49,8 @@ export default function Layout({
         </div>
       </Container>
       <BrandsFooter />
-      <ModalForm  handleClose={handleClose}  show={show}/>
+      <ModalForm handleClose={handleClose} show={show} />
+      <LoginModal handleClose={handleCloseLogin} show={showLogin} />
     </>
   );
 }

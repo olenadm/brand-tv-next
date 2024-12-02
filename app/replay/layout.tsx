@@ -13,13 +13,18 @@ const racing = Racing_Sans_One({ weight: "400", subsets: ["latin"] });
 
 import "./globals.scss";
 import { useState } from "react";
+import LoginModal from "../components/ui/LoginModal";
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCloseLogin = () => setShowLogin(false);
+  const handleShowLogin = () => setShowLogin(true);
   return (
     <>
       <style jsx global>{`
@@ -30,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           font-family: ${racing.style.fontFamily};
         }
       `}</style>
-      <BrandsHeader handleShow={handleShow}/>
+      <BrandsHeader handleShow={handleShow} handleShowLogin={handleShowLogin}/>
 
       <HeroIndividual />
       <section className='rounded-top-5 mainsection bg-white'>
@@ -57,6 +62,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </section>
       <BrandsFooter />
       <ModalForm  handleClose={handleClose}  show={show}/>
+      <LoginModal  handleClose={handleCloseLogin}  show={showLogin}/>
       
     </>
   );
