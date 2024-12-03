@@ -19,7 +19,7 @@ export default function ModalForm(props: {
             <Col sm={4} className="border-right bg-light pt-2 pb-3 px-3">
             <LoginButtons/>
 
-              <div className="row">
+              <div className="row mt-2">
                 <div className="col d-flex align-items-start">
                   <div className="icon-square p-2 rouded-2 text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                     <i className="bi bi-envelope-at"></i>

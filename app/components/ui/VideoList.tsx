@@ -37,7 +37,7 @@ export default function VideoList(props: {
                 <div className="row">
                   <Col xs={6} lg={12} className='px-1'>
                     <Video
-                      slug={`${slug}${vid.id}`}
+                      slug={`${slug}/${vid.id}`}
                       name={vid.name}
                       id={vid.id}
                       videoUrl={vid.url}
