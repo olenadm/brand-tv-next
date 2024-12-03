@@ -1,4 +1,5 @@
 import { Modal, Button, Form, Container, Row, Col } from "react-bootstrap";
+import LoginButtons from "./LoginButtons";
 
 export default function LoginModal(props: {
   show: boolean;
@@ -16,15 +17,7 @@ export default function LoginModal(props: {
           <Row>
             <Col className="text-center">
               <Form>
-                <button className="btn btn-dark my-3  w-100">
-                  Sign in with Apple <i className="bi bi-apple ms-3"></i>
-                </button>
-                <button className="btn btn-dark my-3  w-100">
-                  Sign in with Google <i className="bi bi-google ms-3"></i>
-                </button>
-                <button className="btn btn-dark my-3  w-100">
-                  Sign in with Facebook <i className="bi bi-facebook ms-3"></i>
-                </button>
+                <LoginButtons />
               </Form>
             </Col>
           </Row>
