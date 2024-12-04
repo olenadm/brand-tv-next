@@ -12,6 +12,7 @@ $theme-colors: (
 $border: 1px solid rgb(17 24 39 / 0.05);
 $border-color: rgb(17 24 39 / 0.07);
 $light: rgb(249 250 251 / 1);
+$success:rgb(9 184 80);
 $dark: #021e42;
 $navbar-light-color: rgb(17 24 39);
 $navbar-dark-color: #fff;
@@ -64,12 +65,15 @@ h1 {
 
 .alert {
   border: $border;
-  border-radius: 9999px;
-  padding: 8px 12px;
+ 
 }
 .alert-light {
   background-color: $light;
 }
+.alert-success {
+  background-color: $success;
+}
+
 
 .feature {
   display: inline-flex;

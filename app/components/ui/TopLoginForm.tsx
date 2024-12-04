@@ -1,9 +1,13 @@
 import React from "react";
+import { Alert } from "react-bootstrap";
 
 const TopLoginForm = (props: { handleLogin: () => void }) => {
   const { handleLogin } = props;
   return (
-    <div className="row my-md-5 align-items-center justify-content-center" id="login">
+    <div
+      className="row my-md-5 align-items-center justify-content-center"
+      id="login"
+    >
       <div className="col-12 col-md-12 text-center">
         <aside className="bg-light  shadow-sm bg-gradient rounded-4 p-4 p-sm-5 p-lg-3 p-xl-4">
           <div
@@ -11,10 +15,16 @@ const TopLoginForm = (props: { handleLogin: () => void }) => {
          text-center"
           >
             <div className="col-sm-12">
-              <button className="btn  btn-outline-dark my-2  w-100" onClick={handleLogin}>
+              <button
+                className="btn  btn-outline-dark my-2  w-100"
+                onClick={handleLogin}
+              >
                 <i className="bi bi-apple me-3"></i> Sign in with Apple
               </button>
-              <button className="btn btn-outline-dark my-2  w-100" onClick={handleLogin}>
+              <button
+                className="btn btn-outline-dark my-2  w-100"
+                onClick={handleLogin}
+              >
                 <i className="bi bi-google me-3"></i> Sign in with Google
               </button>
 
@@ -35,6 +45,15 @@ const TopLoginForm = (props: { handleLogin: () => void }) => {
               >
                 Sign in with Email
               </button>
+
+              <Alert variant="success" className="text-white rounded-4 mt-3">
+                <p className="fw-light">
+                  We'll email you a magic code for a password free sign in. Or
+                  you can{" "}
+                  <Alert.Link href="#">sign in with a password</Alert.Link>{" "}
+                  instead.
+                </p>
+              </Alert>
             </div>
           </div>
         </aside>
