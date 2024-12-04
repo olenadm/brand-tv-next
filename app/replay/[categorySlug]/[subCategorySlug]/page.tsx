@@ -20,7 +20,7 @@ export default async function Page(props: {
   console.log(category)
 
   return (
-    <div className='p-3 border rounded-4 mb-5 ms-md-3 shadow-sm'>
+    <div className='p-2 border rounded-4 mb-5 ms-md-3 shadow-sm'>
      
      <VideoList catName={catName} catSlug={catSlug} subCatSlug={subcatSlug} slug="/videos" />
            

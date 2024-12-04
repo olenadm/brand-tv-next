@@ -35,7 +35,7 @@ export default function VideoList(props: {
             <Col key={vid.id} sm={3} md={6} lg={3}>
               <Suspense fallback={<VideoSkeleton />}>
                 <div className="row">
-                  <Col xs={6} lg={12} className='px-1'>
+                  <Col xs={6} lg={12} >
                     <Video
                       slug={`${slug}/${vid.id}`}
                       name={vid.name}
