@@ -18,8 +18,16 @@ export default async function Page(props: {
     <>
       <div className="ind">
         <div className="mb-3">
-          <Ratio aspectRatio={1 / 2}>
-            <iframe src={videoContent?.url} width="100%" />
+          
+          <Ratio aspectRatio="16x9">
+          
+            <iframe
+              src={videoContent?.url}
+              width="100%"
+              height="300"
+              allowFullScreen
+              className="rounded-3"
+            />
           </Ratio>
         </div>
 

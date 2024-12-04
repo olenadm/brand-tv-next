@@ -2,16 +2,13 @@ import React from "react";
 
 export default function LoginButtons() {
   return (
-    <div>
-      <button className="btn btn-dark my-1  w-100">
-        Sign in with Apple <i className="bi bi-apple ms-3"></i>
+    <>
+      <button className="btn  btn-outline-dark my-2  w-100">
+        <i className="bi bi-apple me-3"></i> Sign in with Apple
       </button>
-      <button className="btn btn-dark my-1  w-100">
-        Sign in with Google <i className="bi bi-google ms-3"></i>
+      <button className="btn btn-outline-dark my-2  w-100">
+        <i className="bi bi-google me-3"></i> Sign in with Google
       </button>
-      <button className="btn btn-dark my-1  w-100">
-        Sign in with Facebook <i className="bi bi-facebook ms-3"></i>
-      </button>
-    </div>
+    </>
   );
 }

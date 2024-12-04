@@ -18,6 +18,7 @@ $navbar-dark-color: #fff;
 $default-hover: rgba(0, 0, 0, 0.08);
 $hero-gradient-start: #021e42;
 $hero-gradien-end: rgb(2, 45, 102);
+$primary: #e60e2d;
 
 $list-group-bg: $dark;
 $list-group-border-color: $border-color;
@@ -32,33 +33,33 @@ html,
 body {
   min-height: 100% !important;
   height: 100%;
+  line-height: 1.625;
+  font-family: "Roboto";
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Racing Sans One", sans-serif;
-  font-weight: 400;
+h1 {
+  font-weight: 900;
 }
 
 .navbar {
-  z-index: 2;
+  z-index: 6;
 }
 
 .nav-link {
   font-weight: 500;
 }
 
+.ls-tight {
+  letter-spacing: -0.025em !important;
+}
+
 .hero {
-  background-color: $hero-gradient-start;
+  /*background-color: $hero-gradient-start;
   background-image: linear-gradient(
     75deg,
     $hero-gradient-start 10%,
     $hero-gradien-end 60%
-  );
-  
-
-  color: #fff;
+  );*/
 }
 
 .alert {
@@ -93,9 +94,16 @@ h3 {
   min-height: 320px;
 }
 
-.nav-pills .nav-link.active{background-color: #e60e2d96;}
-.nav-fill > .nav-link, .nav-fill .nav-item{text-align:left; color: #fff; text-decoration: none;}
-.dropdown-menu{
+.nav-pills .nav-link.active {
+  background-color: #e60e2d96;
+}
+.nav-fill > .nav-link,
+.nav-fill .nav-item {
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown-menu {
   --bs-dropdown-bg: #021e42;
 }
 
@@ -111,10 +119,24 @@ h3 {
   position: absolute;
   left: 10px;
 }
-.play {
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
+.icon-shape {
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: .375rem;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  position:absolute; 
+  z-index:4;
+  text-transform: uppercase;   
+  cursor: pointer;  
+  transition: 0.3s;
+  background-color: #ce102c;
+}
+
+.icon-shape:hover{
+  background-color: #810618;
 }
 
 .navButton:hover {
@@ -122,12 +144,16 @@ h3 {
   color: #fff;
 }
 
+.dropdown-item.active, .dropdown-item:active{
+  background-color: var(--primary);
+}
+
 .description h6 span {
   font-weight: 400;
 }
 
 .mainsection {
-  margin-top: -25px;
+  margin-top: -45px;
 }
 
 aside .description h4 {
@@ -162,14 +188,18 @@ footer a:visited {
     padding-top: 70px;
   }
 
-  .ind .videoplaceholder {
-    min-height: 300px;
+  .icon-shape{
+    right: 0;
+    width: 90px;
+    height: 90px;
+    top: -45px;
+    font-size: 14px;
   }
 
-  .videoplaceholder {
-    min-height: 80px;
+ 
+  .nav-link {
+    text-align: left;
   }
-  .nav-link {text-align:left; }
 }
 
 @media (max-width: 767px) {
@@ -182,12 +212,31 @@ footer a:visited {
     padding-bottom: 90px;
   }
 
-  .videoplaceholder {
-    min-height: 110px;
+
+}
+
+@media (min-width: 768px){
+  .icon-shape{
+    right: -40px;
+    width: 90px;
+    height: 90px;
+    top: 25%;
+   
   }
 }
 
 @media (min-width: 1024px) {
+  h1 {
+    font-size: 3.2em;
+  }
+  .icon-shape{
+    top: 25%;
+    width: 130px;
+    height: 130px;
+    right:-60px;
+    font-size: 20px;
+  }
+  
   .videoplaceholder {
     min-height: 80px;
   }

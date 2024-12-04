@@ -1,38 +1,98 @@
 import { videos } from "../api/categories/data";
 import Ratio from "react-bootstrap/Ratio";
-import SignupForm from "./ui/SignupForm";
+import TopLoginForm from "./ui/TopLoginForm";
+import Image from "next/image";
+import { Col } from "react-bootstrap";
 
-const HeroIndividual = (props: { handleShow: () => void }) => {
+const HeroIndividual = (props: { handleLogin: () => void; login: boolean }) => {
   const video = videos.find((vid) => vid.id === "1");
-  const { handleShow } = props;
+  const { handleLogin, login } = props;
 
   return (
     <>
-      <header className="pt-4 pb-5 hero border-bottom" id="top">
+      <header className="py-3 py-md-5 hero border-bottom" id="top">
         <div className="container">
-          <div className=" row align-items-center justify-content-between">
-            <div className="col-sm-6 col-md-12 col-lg-6">
-              <h2 className="mb-4 text-primary">
-                Welcome to Replay Sports Cards new Community Channel!
-              </h2>
-              <p className="lead fw-normal text-primary-50 mb-4">
-                Make sure you sign up to get our latest promotions and offers.
-                And take part to receive exclusive community rewards and
-                discounts,
-              </p>
+          <div className="row align-items-center justify-content-between">
+            <div
+              className={login ? `col-sm-12` : `col-sm-8 col-md-12 col-lg-8`}
+            >
+              {login ? (
+                <h1 className="mt-3 mb-4 text-center">
+                  Welcome to the Replay Sports Channel and here are your
+                  exclusive <span className="text-primary">Fan Benefits!</span>
+                </h1>
+              ) : (
+                <h1 className="mt-3 mb-4 text-center">
+                  Join the Replay Sports Channel and receive these exclusive{" "}
+                  <br />
+                  <span className="text-primary">Fan Benefits!</span>{" "}
+                </h1>
+              )}
+
+              {login && (
+                <div className="row text-center gx-lg-5">
+                  <div className="col-sm-6">
+                    <h4 className="my-3">
+                      Subscribe today and receive <br /> 10% off promocode
+                      instantly!
+                    </h4>
+                    <Image
+                      src="https://dummyimage.com/600x350/cccccc/fff.png"
+                      alt=""
+                      width={600}
+                      height={350}
+                      className="img-fluid mx-auto rounded-3 mb-4"
+                    />
+                  </div>
+                  <div className="col-sm-6">
+                    <h4 className="my-3">
+                      Share videos and enter to win <br /> $250 Store Credit
+                    </h4>
+                    <Image
+                      src="https://dummyimage.com/600x350/cccccc/fff.png"
+                      alt=""
+                      width={600}
+                      height={350}
+                      className="img-fluid mx-auto rounded-3 mb-4"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
-            <div className="col-sm-6 col-md-12 col-lg-6">
-              {" "}
-              <SignupForm handleShow={handleShow} />
+            {!login && (
+              <div className="col-sm-4 col-md-12 col-lg-4">
+                <TopLoginForm handleLogin={handleLogin} />
+              </div>
+            )}
+          </div>
+        </div>
+      </header>
+      <section className="py-5 bg-light">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h4 className="text-primary mb-4  text-center fw-400">
+                Make sure you share the video to be entered into a prize draw
+                for <span className="text-dark">$250</span> store credit
+              </h4>
             </div>
           </div>
-
-          <div className="row align-items-center justify-content-center">
-            <div className="col-xl-12  text-center">
-              <Ratio aspectRatio={1 / 2}>
-                <iframe src={`${video?.url}`} width="100%" allowFullScreen />
+          <div className="row">
+            <Col md={{ span: 6, offset: 3 }} className="position-relative">
+              <Ratio aspectRatio="16x9">
+                <iframe
+                  src={`${video?.url}`}
+                  width="100%"
+                  height="300"
+                  allowFullScreen
+                  className="rounded-3"
+                />
               </Ratio>
-            </div>
+              <div className="icon icon-shape shadow-sm text-lg rounded-circle text-center fw-400 text-white">
+                <span>Share</span>
+                <i className="ms-2 bi bi-rocket-takeoff"></i>
+              </div>
+            </Col>
           </div>
 
           {/*<div className="row align-items-center justify-content-center">
@@ -66,7 +126,7 @@ const HeroIndividual = (props: { handleShow: () => void }) => {
             </div>
           </div>*/}
         </div>
-      </header>
+      </section>
     </>
   );
 };

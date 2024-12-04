@@ -4,7 +4,7 @@ import { Card, CardBody } from "react-bootstrap";
 export default function VideoSkeleton() {
   return (
     <>
-      <Card className="rounded-3 mb-3 videoplaceholder text-center">
+      <Card className="rounded-3 mb-3 videoplaceholder text-center placeholder-glow">
         <CardBody className="d-flex justify-content-center align-items-center">Loading</CardBody>
       </Card>
     </>

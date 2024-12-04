@@ -8,7 +8,7 @@ export default function VideoDescription(props: {
 
   return (
     <div className="description">
-      <h5 className="mt-0">{name}</h5>
+      <h5 className="mt-1">{name}</h5>
       <h6 className='mb-1'>
         Actors:{" "}
         <span>
@@ -16,7 +16,7 @@ export default function VideoDescription(props: {
           incididunt{" "}
         </span>
       </h6>
-      <p className="text-muted">1 day ago, 235 views</p>
+      <p className="text-muted fw-light">1 day ago, 235 views</p>
     </div>
   );
 }

@@ -23,13 +23,7 @@ const SignupForm = (props: {
             </div>
             <div className="col-sm-5 col-md-12 col-lg-5">
               <div className="input-group mb-2">
-                {/* <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Email address..."
-                  aria-label="Email address..."
-                  aria-describedby="button-newsletter"
-                />*/}
+              
                 <button
                   className="btn btn-outline-light w-100"
                   id="button-newsletter"

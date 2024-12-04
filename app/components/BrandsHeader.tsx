@@ -4,10 +4,11 @@ import Link from "next/link";
 // import OffcanvasSide from "./sidebar/Offcanvas";
 
 const BrandsHeader = (props: {
-  handleShow: () => void;
-  handleShowLogin: () => void;
+  handleLogin: () => void;
+  //handleShowLogin: () => void;
+  login: boolean;
 }) => {
-  const { handleShow, handleShowLogin } = props;
+  const { login, handleLogin } = props;
   const branding = "replay.png";
   return (
     <>
@@ -32,7 +33,7 @@ const BrandsHeader = (props: {
           <Navbar.Toggle aria-controls="navbarSupportedContent" />
           <Navbar.Collapse id="navbarSupportedContent">
             <Nav className="ms-auto  nav nav-pills nav-fill">
-              <a href="https://replaysportscards.com" className="nav-link px-3">
+              <a href="https://replaysportscards.com" className="nav-link px-3" >
                 <i className="bi bi-house-check me-2"></i> Home
               </a>
 
@@ -43,30 +44,44 @@ const BrandsHeader = (props: {
                 Shop
               </a>
 
-              <Link href="/replay/" className="nav-link active px-3 ">
+              <Link href="/replay/" className="nav-link active px-3 " >
                 <i className="bi bi-play-circle me-2"></i> Community Channel
               </Link>
             </Nav>
             <Nav className="ms-auto nav">
-              <button className="nav-link px-3" onClick={handleShow}>
-                <i className="bi bi-plus me-2"></i> Sign Up
-              </button>
+            
+              {!login &&   <a
+                href="#login"
+                className="nav-link px-3 d-none d-sm-block"
+              >
+                Login
+              </a> }
 
-              <button className="nav-link px-3" onClick={handleShowLogin}>
-                <i className="bi bi-person-video2 me-2"></i> Login
-              </button>
+              
+              {login && (
+                <NavDropdown
+                  title="Hi, username!"
+                  id="collapsible-nav-dropdown"
+                >
+                  <NavDropdown.Item href="#action/3.2">
+                    <i className="bi bi-star-fill me-2"></i> Loyalty Points
+                  </NavDropdown.Item>
 
-              <NavDropdown title="Username" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  <i className="bi bi-star-fill me-2"></i> Loyalty Points
-                </NavDropdown.Item>
-
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  <i className="bi bi-gear-wide-connected me-2"></i> Settings
-                </NavDropdown.Item>
-              </NavDropdown>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4" eventKey='1'>
+                    <i className="bi bi-gear-wide-connected me-2"></i> Settings
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item eventKey='2'>
+                    <button
+                      className="btn btn-primary w-100"
+                      onClick={handleLogin}
+                    >
+                      <i className="bi bi-gear-wide-connected me-2"></i> Log out
+                    </button>
+                  </NavDropdown.Item>
+                </NavDropdown>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
