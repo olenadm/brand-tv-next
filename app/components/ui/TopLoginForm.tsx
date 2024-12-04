@@ -48,7 +48,7 @@ const TopLoginForm = (props: { handleLogin: () => void }) => {
 
               <Alert variant="success" className="text-white rounded-4 mt-3">
                 <p className="fw-light">
-                  We'll email you a magic code for a password free sign in. Or
+                  We will email you a magic code for a password free sign in. Or
                   you can{" "}
                   <Alert.Link href="#">sign in with a password</Alert.Link>{" "}
                   instead.
