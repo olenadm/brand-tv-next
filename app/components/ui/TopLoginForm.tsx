@@ -33,7 +33,6 @@ const TopLoginForm = (props: { handleLogin: () => void }) => {
                 type="email"
                 className="form-control my-2"
                 placeholder="name@example.com"
-                autoFocus
                 required
               />
 
@@ -46,7 +45,10 @@ const TopLoginForm = (props: { handleLogin: () => void }) => {
                 Sign in with Email
               </button>
 
-              <Alert variant="success" className="text-white rounded-4 mt-3">
+              <Alert variant="success" className="text-dark text-start rounded-4 mt-3 d-flex justyfy-items-center">
+                <div>
+                  <i className="bi bi-magic text-primary display-6 me-3"></i>
+                </div>
                 <p className="fw-light">
                   We will email you a magic code for a password free sign in. Or
                   you can{" "}

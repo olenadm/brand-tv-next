@@ -3,7 +3,14 @@ import Image from "next/image";
 
 export default function CreateAndShare() {
   return (
-    <aside className="bg-primary bg-gradient  p-4 p-sm-5 p-lg-3 p-xl-4">
+    <aside
+      className="bg-primary bg-gradient  p-4 p-sm-5 p-lg-3 p-xl-4"
+      style={{
+        backgroundImage: 'url("/contact-bg.png")!important',
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="container">
         <div className="row mt-3 mb-5 align-items-center justify-content-center">
           <div className="col-12 col-md-12 text-center">

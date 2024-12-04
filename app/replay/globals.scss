@@ -5,14 +5,16 @@ $theme-colors: (
   "primary": #e60e2d,
   "dark": #021e42,
   "light": rgb(249 250 251 / 1),
-  "secondary": rgb(249 250 251 / 1),
+  
   "default": rgba(0, 0, 0, 0.08),
+  "secondary": #f3f6ff,
 );
 
 $border: 1px solid rgb(17 24 39 / 0.05);
 $border-color: rgb(17 24 39 / 0.07);
 $light: rgb(249 250 251 / 1);
 $success: #729c69;
+$secondary: #f3f6ff;
 $dark: #021e42;
 $navbar-light-color: rgb(17 24 39);
 $navbar-dark-color: #fff;
@@ -54,14 +56,14 @@ h1 {
   letter-spacing: -0.025em !important;
 }
 
-.hero {
-  /*background-color: $hero-gradient-start;
+/*.hero {
+  background-color: $hero-gradient-start;
   background-image: linear-gradient(
     75deg,
     $hero-gradient-start 10%,
     $hero-gradien-end 60%
-  );*/
-}
+  );
+}*/
 
 .alert {
   border: $border;
@@ -71,7 +73,7 @@ h1 {
   background-color: $light;
 }
 .alert-success {
-  background-color: $success;
+  background-color: #f3f6ff;
 }
 
 
@@ -193,7 +195,7 @@ footer a:visited {
   }
 
   .icon-shape{
-    right: 0;
+    right: 10px;
     width: 90px;
     height: 90px;
     top: -45px;
