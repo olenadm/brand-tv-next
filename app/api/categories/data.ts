@@ -94,7 +94,7 @@ export const videos = [
     name: "Patrick Mahommes Favorite _ Card (byJamieE)",
     url: "https://player.vimeo.com/video/1037354715?h=47eae0ba49&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
     cat: ["films"],
-    anotherCat: ['recommended', 'youlike'],
+    anotherCat: 'youlike',
     metadata: {
       actors: [""],
       release_date: "24/02/1980",
