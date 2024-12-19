@@ -1,17 +1,15 @@
 import React from "react";
-import { Placeholder } from "react-bootstrap";
 
 export default function VideoSkeleton() {
   console.log("loading suspense");
   return (
-    <>
-      <Placeholder as="div" animation="glow">
-        <Placeholder
-          xs={12}
-          className="mt-3 rounded-4 p-5"
-          style={{ height: "300px" }}
-        />
-      </Placeholder>
-    </>
+    <div className="placeholder-glow mb-3">
+      <span
+        className="placeholder col-12 rounded-4 mb-2"
+        style={{ height: "300px" }}
+      ></span>
+      <span className="placeholder col-8 rounded-3"></span>
+      <span className="placeholder col-6 rounded-3"></span>
+    </div>
   );
 }

@@ -5,7 +5,6 @@ import { useState } from "react";
 
 import VideoSkeleton from "./VideoSkeleton";
 import VideoDescription from "./VideoDescription";
-import { Placeholder } from "react-bootstrap";
 
 const ReactPlayer = dynamic(() => import("react-player/vimeo"), { ssr: false });
 
@@ -29,24 +28,7 @@ export default function VideoPlayer(props: { url?: string; name?: string }) {
       {url ? (
         <>
           {loading ? (
-            <>
-              <VideoSkeleton />
-
-              <Placeholder as="div" animation="glow" className="w-75">
-                <Placeholder
-                  xs={12}
-                  className="mt-2 rounded-3 p-3"
-                  style={{ height: "40px" }}
-                />
-              </Placeholder>
-              <Placeholder as="p" animation="glow" className="w-50">
-                <Placeholder
-                  xs={12}
-                  className="mt-2 rounded-3 p-3"
-                  style={{ height: "15px" }}
-                />
-              </Placeholder>
-            </>
+            <VideoSkeleton />
           ) : (
             <>
               <div className="mb-3 videoplaceholder p-3">
