@@ -5,7 +5,6 @@ $theme-colors: (
   "primary": #e60e2d,
   "dark": #021e42,
   "light": rgb(249 250 251 / 1),
-  
   "default": rgba(0, 0, 0, 0.08),
   "secondary": #f3f6ff,
 );
@@ -67,7 +66,6 @@ h1 {
 
 .alert {
   border: $border;
- 
 }
 .alert-light {
   background-color: $light;
@@ -76,6 +74,22 @@ h1 {
   background-color: #f3f6ff;
 }
 
+.player,
+.if .player {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.vimeoContainer {
+  /*  --video--width: 1296;
+  --video--height: 540;
+
+  
+  padding-bottom: calc(var(--video--height) / var(--video--width) * 100%); /* 41.66666667% */
+  overflow: hidden;
+  position: relative;
+  min-height: 200px;
+  max-width: 100%;
+}
 
 .feature {
   display: inline-flex;
@@ -129,19 +143,19 @@ h1 {
   text-align: center;
   vertical-align: middle;
 
-  border-radius: .375rem;
+  border-radius: 0.375rem;
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  position:absolute; 
-  z-index:4;
-  text-transform: uppercase;   
-  cursor: pointer;  
+  position: absolute;
+  z-index: 4;
+  text-transform: uppercase;
+  cursor: pointer;
   transition: 0.3s;
   background-color: #ce102c;
 }
 
-.icon-shape:hover{
+.icon-shape:hover {
   background-color: #810618;
 }
 
@@ -150,7 +164,8 @@ h1 {
   color: #fff;
 }
 
-.dropdown-item.active, .dropdown-item:active{
+.dropdown-item.active,
+.dropdown-item:active {
   background-color: var(--primary);
 }
 
@@ -189,12 +204,36 @@ footer a:visited {
   font-size: 25px;
 }
 
+.react-player__shadow {
+  display: none !important;
+}
+.react-player__preview {
+  cursor: auto !important;
+  border-radius: 5px !important;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 @media (min-width: 300px) {
   body {
     padding-top: 70px;
   }
 
-  .icon-shape{
+  .reactPlayer {
+    height: 130px !important;
+  }
+
+  .icon-shape {
     right: 10px;
     width: 90px;
     height: 90px;
@@ -202,7 +241,6 @@ footer a:visited {
     font-size: 14px;
   }
 
- 
   .nav-link {
     text-align: left;
   }
@@ -217,32 +255,32 @@ footer a:visited {
   .appwrap {
     padding-bottom: 90px;
   }
-
-
 }
 
-@media (min-width: 768px){
-  .icon-shape{
+@media (min-width: 768px) {
+  .icon-shape {
     right: -40px;
     width: 90px;
     height: 90px;
     top: 25%;
-   
   }
 }
 
 @media (min-width: 1024px) {
+  .reactPlayer {
+    height: 180px !important;
+  }
   h1 {
     font-size: 3.2em;
   }
-  .icon-shape{
+  .icon-shape {
     top: 25%;
     width: 130px;
     height: 130px;
-    right:-60px;
+    right: -60px;
     font-size: 20px;
   }
-  
+
   .videoplaceholder {
     min-height: 80px;
   }

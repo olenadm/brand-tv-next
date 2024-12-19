@@ -1,8 +1,11 @@
 "use client";
 
 import React from "react";
-import { Card, CardBody, Ratio } from "react-bootstrap";
+import { Card, CardBody } from "react-bootstrap";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const ReactPlayer = dynamic(() => import("react-player/vimeo"), { ssr: false });
 
 export default function Video(props: {
   slug: string | undefined;
@@ -16,19 +19,25 @@ export default function Video(props: {
   return (
     <>
       <Card className="rounded-3 mb-3 videoplaceholder text-center">
-        <CardBody className='px-0'>
-          <Ratio aspectRatio={1 / 2}>
-            <iframe
-              src={`${videoUrl}?embedparameter=value&controls=false`}
-              width="100%"
-            />
-          </Ratio>
+        <CardBody className="p-2">
+          <ReactPlayer
+            url={videoUrl}
+            width="100%"
+            className="reactPlayer rounded"
+            light
+            style={{}}
+            onError={(e) => console.error("Player error:", e)}
+            config={{
+              playerOptions: { responsive: true },
+            }}
+            controls={false}
+          />
 
           <Link
             href={slug_url}
-            scroll={true}
+            scroll={false}
             title={name}
-            className="my-2 mx-2 text-center d-block bg-gradientd-block btn btn-primary"
+            className="my-2 text-center d-block bg-gradientd-block btn btn-primary"
           >
             Watch Video
           </Link>

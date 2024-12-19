@@ -35,7 +35,7 @@ export const videos = [
   {
     id: '1',
     name: "Replay Gives Back",
-    url: "https://player.vimeo.com/video/1033764326?h=83dd8cf38c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    url: "https://player.vimeo.com/video/1033764326?h=83dd8cf38c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1",
     cat: ["professional", "company"],
     anotherCat: 'featured',
     metadata: {
@@ -49,7 +49,7 @@ export const videos = [
   {
     id: '2',
     name: "Replay Sports Cards Welcome Video",
-    url: "https://player.vimeo.com/video/1037354669?h=353c6329e3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    url: "https://player.vimeo.com/video/1037354669?h=353c6329e3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1",
     cat: ["prom"],
     anotherCat: 'youlike',
     metadata: {
@@ -63,7 +63,7 @@ export const videos = [
   {
     id: '3',
     name: "Puka Nacuna Favorite Sports Cards by CodyE",
-    url: "https://player.vimeo.com/video/1037354702?h=67deb56280&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    url: "https://player.vimeo.com/video/1037354702?h=67deb56280&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1",
     cat: ["company"],
     anotherCat: 'recommended',
     metadata: {
@@ -78,7 +78,7 @@ export const videos = [
   {
     id: '4',
     name: "Tom Brady Favorite Sports Cards BY CodyE",
-    url: "https://player.vimeo.com/video/1037354687?h=30739a507a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    url: "https://player.vimeo.com/video/1037354687?h=30739a507a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1",
     cat: ["films"],
     anotherCat: 'recommended',
     metadata: {
@@ -92,7 +92,7 @@ export const videos = [
   {
     id: '5',
     name: "Patrick Mahommes Favorite _ Card (byJamieE)",
-    url: "https://player.vimeo.com/video/1037354715?h=47eae0ba49&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    url: "https://player.vimeo.com/video/1037354715?h=47eae0ba49&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1",
     cat: ["films"],
     anotherCat: 'youlike',
     metadata: {

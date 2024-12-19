@@ -1,12 +1,17 @@
 import React from "react";
-import { Card, CardBody } from "react-bootstrap";
+import { Placeholder } from "react-bootstrap";
 
 export default function VideoSkeleton() {
+  console.log("loading suspense");
   return (
     <>
-      <Card className="rounded-3 mb-3 videoplaceholder text-center placeholder-glow">
-        <CardBody className="d-flex justify-content-center align-items-center">Loading</CardBody>
-      </Card>
+      <Placeholder as="div" animation="glow">
+        <Placeholder
+          xs={12}
+          className="mt-3 rounded-4 p-5"
+          style={{ height: "300px" }}
+        />
+      </Placeholder>
     </>
   );
 }
