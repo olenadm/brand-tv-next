@@ -1,10 +1,9 @@
 import { videos } from "../api/categories/data";
 import Ratio from "react-bootstrap/Ratio";
 
-const HeroIndividual = (props: { handleLogin: () => void; login: boolean }) => {
+const HeroIndividual = () => {
   const video = videos.find((vid) => vid.id === "1");
-  //const { handleLogin, login } = props;
-
+  
   return (
     <>
       <header
