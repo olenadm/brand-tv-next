@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className={roboto.className}>
       <BrandsHeader login={login} handleLogin={handleLogin} />
 
-      <HeroIndividual handleLogin={handleLogin} login={login} />
+      <HeroIndividual  />
 
       <CreateAndShare />
 
