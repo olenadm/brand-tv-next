@@ -54,7 +54,7 @@ const BrandsHeader = (props: {
                 href="#login"
                 className="nav-link px-3 d-none d-sm-block"
               >
-                Login
+                <i className="bi bi-node-plus me-2"></i> Join our community
               </a> }
 
               

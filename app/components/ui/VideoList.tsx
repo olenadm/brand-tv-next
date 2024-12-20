@@ -17,7 +17,7 @@ export default function VideoList(props: {
   const category = catName ? catName : "All";
   let videos_s: VideoType[] = videos.filter((vid) => vid.cat.includes(catSlug));
 
-  if (category === "All") {
+  if (category === "All" || "More Videos") {
     videos_s = videos;
   }
 
@@ -27,7 +27,7 @@ export default function VideoList(props: {
 
   return (
     <>
-      <h4 className="mt-2 mb-3 text-default ms-3 fw-normal">{category}</h4>
+      <h5 className="mt-2 mb-3 text-dark ms-3 fw-normal">{category}</h5>
 
       <div className="row">
         {videos_s.length > 0 ? (

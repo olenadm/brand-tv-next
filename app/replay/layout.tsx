@@ -18,6 +18,8 @@ import "./globals.scss";
 import { useState } from "react";
 
 import CreateAndShare from "../components/ui/CreateAndShare";
+import JoinOurComunity from "../components/ui/JoinOurComunity";
+import VideoList from "../components/ui/VideoList";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [login, setLogin] = useState(false);
@@ -53,6 +55,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </Container>
+      </section>
+      <JoinOurComunity />
+      <section className="bg-light py-5">
+        <div className="container">
+          <VideoList catName="More Videos" slug="videos/" catSlug="All" />
+        </div>
       </section>
       <BrandsFooter />
       {/* <ModalForm handleClose={handleClose} show={show} />

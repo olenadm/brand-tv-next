@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function VideoSkeleton() {
-  console.log("loading suspense");
   return (
     <div className="placeholder-glow mb-3">
       <span

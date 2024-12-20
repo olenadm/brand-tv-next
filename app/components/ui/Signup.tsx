@@ -10,7 +10,7 @@ export default function Signup() {
               {/* <div className="fs-3 fw-bold text-white">
                     New products, delivered to you.
                   </div> */}
-              <div className="text-white-50">Contact us at hi@brandtv.ai</div>
+              <div className="text-white">Contact us at hi@brandtv.ai</div>
             </div>
             <div className="ms-xl-4">
               {/* <div className="input-group mb-2">

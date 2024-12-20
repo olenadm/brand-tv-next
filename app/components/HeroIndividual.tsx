@@ -1,132 +1,76 @@
 import { videos } from "../api/categories/data";
 import Ratio from "react-bootstrap/Ratio";
-import TopLoginForm from "./ui/TopLoginForm";
-import Image from "next/image";
-import { Col } from "react-bootstrap";
 
 const HeroIndividual = (props: { handleLogin: () => void; login: boolean }) => {
   const video = videos.find((vid) => vid.id === "1");
-  const { handleLogin, login } = props;
+  //const { handleLogin, login } = props;
 
   return (
     <>
-      <header className="py-3 py-md-5 hero border-bottom" id="top">
+      <header
+        className="py-3 py-md-5 py-lg-5 hero border-bottom h-100"
+        id="top"
+      >
         <div className="container">
           <div className="row align-items-center justify-content-between">
-            <div
-              className={login ? `col-sm-12` : `col-sm-8 col-md-12 col-lg-8`}
-            >
-              {login ? (
-                <h1 className="mt-3 mb-4 text-center">
-                  Welcome to the Replay Sports Channel and here are your
-                  exclusive <span className="text-primary">Fan Benefits!</span>
-                </h1>
-              ) : (
-                <h1 className="mt-3 mb-4 text-center">
-                  Join the Replay Sports Channel and receive these exclusive{" "}
-                  <br />
-                  <span className="text-primary">Fan Benefits!</span>{" "}
-                </h1>
-              )}
+            <div className="col-sm-6">
+              <h1 className="mt-3 mb-4 fw-light lh-2">
+                Join the Replay Sports Channel and receive
+                <p className="fw-bold display-2">
+                  Fan <span className="text-primary">Benefits!</span>
+                </p>
+              </h1>
+              <p className="lead mb-0">
+                Let your brand shine with our innovative community.
+              </p>
+              <ul className="list-inline d-flex flex-wrap gap-2 gap-xl-3 mt-3 mt-lg-4">
+                <li className="list-inline-item heading-color">
+                  {" "}
+                  <i className="bi bi-check-circle text-success me-1"></i>
+                  Flexible solutions
+                </li>
+                <li className="list-inline-item heading-color">
+                  {" "}
+                  <i className="bi bi-check-circle text-success me-1"></i>
+                  Great involvement
+                </li>
+                <li className="list-inline-item heading-color">
+                  {" "}
+                  <i className="bi bi-check-circle text-primary me-1"></i>
+                  Community and benefits
+                </li>
+              </ul>
+            </div>
+            <div className="col-sm-6">
+              <div className="p-3 p-md-4 rounded-4 blurred bg-transp border  position-relative">
+                <Ratio aspectRatio="16x9">
+                  <iframe
+                    src={`${video?.url}`}
+                    width="100%"
+                    height="330"
+                    allowFullScreen
+                    className="rounded-4"
+                  />
+                </Ratio>
 
-              {login && (
-                <div className="row text-center gx-lg-5">
-                  <div className="col-sm-6">
-                    <h4 className="my-3">
-                      Subscribe today and receive <br /> 10% off promocode
-                      instantly!
-                    </h4>
-                    <Image
-                      src="https://dummyimage.com/600x350/cccccc/fff.png"
-                      alt=""
-                      width={600}
-                      height={350}
-                      className="img-fluid mx-auto rounded-3 mb-4"
-                    />
-                  </div>
-                  <div className="col-sm-6">
-                    <h4 className="my-3">
-                      Share videos and enter to win <br /> $250 Store Credit
-                    </h4>
-                    <Image
-                      src="https://dummyimage.com/600x350/cccccc/fff.png"
-                      alt=""
-                      width={600}
-                      height={350}
-                      className="img-fluid mx-auto rounded-3 mb-4"
-                    />
+                <div className="position-absolute top-0 start-0 mt-5 ms-md-n4 d-none d-md-block">
+                  <div className="mt-4 bg-body shadow rounded-pill d-inline-flex align-items-center ps-2 pe-4 py-2">
+                    <div className="avatar rounded-circle flex-shrink-0 bg-primary text-white text-center d-flex  align-items-center justify-content-center">
+                      <i className="bi bi-rocket-takeoff"></i>
+                    </div>
+                    <div className="ps-3">
+                      <span className="small heading-color fw-bold">
+                        Share our videos
+                      </span>
+                      <p className="small mb-0">🔥 Lorem ipsum!</p>
+                    </div>
                   </div>
                 </div>
-              )}
-            </div>
-            {!login && (
-              <div className="col-sm-4 col-md-12 col-lg-4">
-                <TopLoginForm handleLogin={handleLogin} />
               </div>
-            )}
+            </div>
           </div>
         </div>
       </header>
-      <section className="py-5 bg-light">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <h4 className="text-primary mb-4  text-center fw-400">
-                Make sure you share the video to be entered into a prize draw
-                for <span className="text-dark">$250</span> store credit
-              </h4>
-            </div>
-          </div>
-          <div className="row">
-            <Col md={{ span: 6, offset: 3 }} className="position-relative">
-              <Ratio aspectRatio="16x9">
-                <iframe
-                  src={`${video?.url}`}
-                  width="100%"
-                  height="300"
-                  allowFullScreen
-                  className="rounded-3"
-                />
-              </Ratio>
-              <div className="icon icon-shape shadow-sm text-lg rounded-circle text-center fw-400 text-white">
-                <span>Share</span>
-                <i className="ms-2 bi bi-rocket-takeoff"></i>
-              </div>
-            </Col>
-          </div>
-
-          {/*<div className="row align-items-center justify-content-center">
-            <div className="col-lg-8 col-xl-4 col-xxl-4  order-1">
-              <div className="my-3 mt-lg-5 text-center text-xl-start">
-                <h1 className="display-5 fw-bolder mb-2 text-primary">
-                  Our company
-                </h1>
-                <p className="lead fw-normal text-primary-50 mb-4">
-                  Welcome to Replay Sports Cards new Community Channale powered by BrandTV.
-                </p>
-                <p className="lead fw-normal text-primary-50 mb-4">
-                 Make sure you sign up to get our latest promotions and offers. 
-                 And take part to receive exclusive community rewards and discounts,
-                </p>
-                <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                  <a
-                    className="btn btn-primary btn-md px-4 me-sm-3 text-white rounded-5"
-                    href="#features"
-                  >
-                    Sign Up <i className="bi bi-plus"></i>
-                  </a>
-                
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-8 col-xxl-8  d-xl-block text-center order-0 order-lg-2">
-              <Ratio aspectRatio={1 / 2}>
-                <iframe src={`${video?.url}`} width="100%" allowFullScreen />
-              </Ratio>
-            </div>
-          </div>*/}
-        </div>
-      </section>
     </>
   );
 };
